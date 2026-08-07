@@ -1,11 +1,7 @@
 {
- "generatedAt": "2026-08-07T17:34:21Z",
+ "generatedAt": "2026-08-07T18:10:35Z",
  "runway": 62,
  "log": [
-  "- 2026-08-07 12:08 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 12:23 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-07 12:42 UTC · bridge worker wake#2 · #5 SPEC READY (patches/0003): selection point located (beta_flow:230 cards.first), scorer law + floors + DoD specified · v3 CONFIRMED LIVE: 3 wakes since 11:40, #3 suite-in-flight, #4 route-corrected live-path fix in flight, #9 test-first prep",
-  "- 2026-08-07 13:05 UTC . mac auto-builder v3.0 . #3 DONE on night/auto-20260807-1223 (f2636dc): three quadratic passes fixed (preview byCategory, corpus bySpan copies, proposition rescans), 200MB import 77s -> 6.4s, shape law added (per-MB ratio <3.0, measured 1.0-1.35), gate runs two fixtures + prints timings, docs/IMPORT_TIMINGS.md; analyze clean, suite 2440 green, fixture law green . days-closer: 1.5",
   "- 2026-08-07 13:25 UTC . mac auto-builder v3.0 . #10 DONE on night/auto-20260807-1223 (081e6ae, via release-captain): docs/APP_REVIEW_PREAUDIT.md - hostile guideline pass w/ file:line evidence, privacy-nutrition from zero-egress law, reviewer notes + 2-min demo path; blocking find: HealthKit entitlement absent while GhostHealthKit.swift ships live (2.1 reject, FOUNDER DECISION); 7 FIX FIRST incl. paywall missing privacy/terms links (3.1.2) and Sentry deciding the crash-data label; docs-only, no Flutter gate . days-closer: 4.0",
   "- 2026-08-07 12:51 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 13:06 UTC . mac auto-builder v3.0 . wake",
@@ -41,7 +37,11 @@
   "- 2026-08-07 16:37 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 16:52 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 17:19 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 17:34 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-07 17:34 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 17:55 UTC . pushbot . PUSHED night/release-wiring-20260807 -> origin (53 commits ahead of beta-2)",
+  "- 2026-08-07 17:55 UTC . pushbot . PR OPENED for night/release-wiring-20260807",
+  "- 2026-08-07 17:55 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 18:10 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -62,7 +62,7 @@
   {
    "n": 4,
    "task": "Empty-state audit on beta path, fix cheapest three",
-   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 16:59 UTC, re-claimed from stale; applying patches/0002 A/B/C on night/auto-20260807-1652"
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 17:42 UTC, wake 1734: prior wake's A/B/C implementation found uncommitted on 1608 worktree; verifying (analyze clean, targeted tests green, full suite running)"
   },
   {
    "n": 5,
@@ -97,7 +97,7 @@
   {
    "n": 11,
    "task": "Suite honestly green on release/sentr-1.0 (Ghost_Clone): wire GhostQuestionScreen per production_wiring law; classify 'interview' literal in QuestionBox",
-   "status": "OPEN — SPEC READY (patches/0005, 16:08 UTC): both defects located with file:line (wiring_test:200 vs zero callers; question_box.dart:129 vs interview_session.dart:119), seam + collision rules + DoD specified"
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 17:47 UTC, wake 1734. canon-warden RULED: SPEC 0005's route-1 fix BLOCKED (one_app_test + 686a9f6 — re-wiring the dark screen re-ships the founder-reported defect); lawful fix is Candidate B (port \"Not what I meant\" into SentrAskScreen, delete GhostQuestionScreen + its entries per the laws' own escape clauses, 7 conditions). Working in fresh worktree off release/sentr-1.0 (Ghost_Clone checkout is dirty with founder's stale day work — untouched)"
   },
   {
    "n": 12,
@@ -117,7 +117,7 @@
   {
    "n": 15,
    "task": "Care-floor sentence MISSING on the membership/purchase screen (canon: care floor outranks purchase — the sentence belongs on the purchase sheet; found honestly by #6 screenshot work — frame 10 unshootable without it; adjacent to #10 fix-first 3.1.2). One sentence + its law test.",
-   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 16:57 UTC, branch night/auto-20260807-1608"
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 17:42 UTC, wake 1734: sentence + law test implemented, analyze clean, law green; full suite running before commit"
   }
  ]
 }
