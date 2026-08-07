@@ -1,9 +1,7 @@
 {
- "generatedAt": "2026-08-07T16:52:41Z",
+ "generatedAt": "2026-08-07T17:34:21Z",
  "runway": 62,
  "log": [
-  "- 2026-08-07 11:48 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 11:57 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 12:08 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 12:23 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 12:42 UTC · bridge worker wake#2 · #5 SPEC READY (patches/0003): selection point located (beta_flow:230 cards.first), scorer law + floors + DoD specified · v3 CONFIRMED LIVE: 3 wakes since 11:40, #3 suite-in-flight, #4 route-corrected live-path fix in flight, #9 test-first prep",
@@ -41,7 +39,9 @@
   "- 2026-08-07 16:37 UTC . pushbot . PUSHED night/auto-20260807-1608 -> origin (1 commits ahead of beta-2)",
   "- 2026-08-07 16:37 UTC . pushbot . PR OPENED for night/auto-20260807-1608",
   "- 2026-08-07 16:37 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 16:52 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-07 16:52 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 17:19 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 17:34 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -62,7 +62,7 @@
   {
    "n": 4,
    "task": "Empty-state audit on beta path, fix cheapest three",
-   "status": "CLAIM STALE (marked 16:08 UTC — claimed 11:52, no commit in 4h; RE-CLAIM and apply patches/0002 live-path fixes; prior branch night/auto-20260807-1140)"
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 16:59 UTC, re-claimed from stale; applying patches/0002 A/B/C on night/auto-20260807-1652"
   },
   {
    "n": 5,
