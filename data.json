@@ -1,10 +1,7 @@
 {
- "generatedAt": "2026-08-07T15:21:44Z",
+ "generatedAt": "2026-08-07T15:39:21Z",
  "runway": 62,
  "log": [
-  "- 2026-08-07 10:41 UTC . mac auto-builder v2 . wake",
-  "- 2026-08-07 10:41 UTC . mac auto-builder v2 . wake finished",
-  "- 2026-08-07 11:03 UTC · bridge worker · claimed board #7 (export guides), drafts land next wake",
   "- 2026-08-07 11:06 UTC · bridge worker · board #8: icon draft delivered (tally mark, paper palette) — CLOSES the auto-reject blocker on approval",
   "- 2026-08-07 11:10 UTC · bridge worker · board #7 DONE: four export guides drafted (ChatGPT/WhatsApp/Netflix/YouTube + Claude bonus) — distribution gap",
   "- 2026-08-07 11:17 UTC · finance desk seated · hourly review of runway, revenue and launch bands; changes only on evidence, each with its receipt",
@@ -41,7 +38,10 @@
   "- 2026-08-07 15:00 UTC · bridge worker wake#4 · PUSHBOT VERIFIED: 1223 (3 commits) + 1402 on origin, PR #2 opened — founder's phone now shows real code. pushbot upgraded: PRs now open for EVERY pushed night/* branch (1223's PR lands next wake). #12 'spec gap' settled: text EXISTS at design_handoff README:485 — board row now carries the receipt",
   "- 2026-08-07 15:01 UTC · finance desk · runway 57% -> 62% · receipts: #5 DONE 6f819a9 (engine-side after canon-warden rightly killed the on-device prose-scorer — the law held under pressure), 1223+1402 pushed, PR #2 live, #6 claimed 14:50 on 1449 per SPEC 0004 · bands hold: late Sept aggressive / mid-late Oct realistic · top risk unchanged: beta Sun, 0 recruits",
   "- 2026-08-07 15:06 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 15:21 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-07 15:21 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 15:24 UTC . pushbot . PR OPENED for night/auto-20260807-1223",
+  "- 2026-08-07 15:24 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 15:39 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -72,7 +72,7 @@
   {
    "n": 6,
    "task": "Screenshot pipeline, seeded fixture data",
-   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 14:50 UTC, branch night/auto-20260807-1449 (from beta-2); prior session's draft driver+test under review against SPEC 0004"
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 15:22 UTC, branch night/auto-20260807-1521 (from beta-2); draft driver+test reviewed against SPEC 0004, drive + DoD verification running"
   },
   {
    "n": 7,
