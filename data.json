@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-08-07T13:31:02Z",
- "runway": 50,
+ "generatedAt": "2026-08-07T14:02:23Z",
+ "runway": 57,
  "log": [
   "- 2026-08-07 09:40 UTC · wake (manual) · Card One scorer prototype assigned (cloud) — output in its own conversation",
   "- 2026-08-07 09:48 UTC · wake (manual) · demo website first cut assigned (cloud) — output in its own conversation",
@@ -33,7 +33,13 @@
   "- 2026-08-07 13:06 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 13:11 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 13:26 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-07 13:27 UTC · bridge worker · #14 added FOUNDER PRIORITY: publish the live office (payload staged in deliverables/office_live) — URL to be minted by next builder wake and logged in caps"
+  "- 2026-08-07 13:27 UTC · bridge worker · #14 added FOUNDER PRIORITY: publish the live office (payload staged in deliverables/office_live) — URL to be minted by next builder wake and logged in caps",
+  "- 2026-08-07 13:33 UTC . mac auto-builder v3.0 . #14 DONE: LIVE OFFICE PUBLISHED AT HTTPS://DANIELLAX0.GITHUB.IO/SENTR-OFFICE/ (public repo sentr-office, GitHub Pages, passcode-gated, noindex; netlify CLI absent, Ghost_Deploy mid-cherry-pick so route c). Standing rule wired into nightbuilder.sh: every wake regen_office_data.py refreshes data.json (runway/log/board) + push. No secrets in payload, verified . days-closer: 0.0",
+  "- 2026-08-07 13:47 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 13:52 UTC · bridge worker · ROOT CAUSE of empty GitHub on founder's phone: model-side push silently failed every wake (5 local night/* branches, 0 on origin). PUSHBOT spliced into nightbuilder.sh: deterministic push of night/* branches each wake + PR if gh exists. Expect night/auto-20260807-1223 (f2636dc #3 + 081e6ae #10) on origin at next wake (~14:05).",
+  "- 2026-08-07 13:57 UTC · bridge worker wake#3 · #6 SPEC READY (patches/0004): boot seam located (SentrApp showSampleData, hostile_beta_walkthrough:68 pattern), driver + 10 App Store frames + DoD specified; no lib/ diffs allowed",
+  "- 2026-08-07 13:58 UTC · finance desk · runway 50% -> 57% · receipts: #3 DONE f2636dc (import 77s->6.4s), #10 DONE 081e6ae (pre-audit, HealthKit 2.1 caught pre-submission), #14 DONE (live office URL published), #9 committed b2713e5 suite-pending, #5 built on 1326 suite-in-flight · launch bands hold: late Sept aggressive / mid-late Oct realistic · biggest non-code risk unchanged: beta recruits (Sun 10 Aug, 0 confirmed)",
+  "- 2026-08-07 14:02 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -59,12 +65,12 @@
   {
    "n": 5,
    "task": "Card One selection law (score all candidates at import)",
-   "status": "OPEN — SPEC READY (patches/0003) + cloud prototype; needs Mac"
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 13:35 UTC, branch night/auto-20260807-1326, per patches/0003"
   },
   {
    "n": 6,
    "task": "Screenshot pipeline, seeded fixture data",
-   "status": "OPEN"
+   "status": "OPEN — SPEC READY (patches/0004, 13:56 UTC): seam=SentrApp(showSampleData:true), driver+10 frames specified w/ DoD"
   },
   {
    "n": 7,
@@ -104,7 +110,7 @@
   {
    "n": 14,
    "task": "PUBLISH THE LIVE OFFICE — FOUNDER PRIORITY, claim before any other OPEN item. Deploy night_shift/deliverables/office_live/ (index.html + data.json, passcode-gated, noindex) to a public URL. Try in order: (a) `netlify` CLI authed → `netlify sites:create` a NEW site (name like sentr-office-<4 random chars>) and `netlify deploy --prod`; (b) sentr-ghost is git-linked → find its source (check Ghost_Deploy/, Sentr_ExportDoor/, netlify.toml anywhere), add /office/ dir, commit+push that repo only; (c) gh CLI authed → new PUBLIC repo sentr-office, push, enable Pages. On success: append the FINAL URL to LOG.md in caps, and add a STANDING RULE to your own wake routine: every wake, regenerate data.json ({generatedAt ISO, runway, log: last 40 LOG.md lines as strings, board: parsed NIGHT_BOARD rows {n,task,status}}) and redeploy/push it. Never place secrets, keys, or the repos' code in the published dir.",
-   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 13:29 UTC: netlify CLI absent (a), Ghost_Deploy mid-cherry-pick + publishes repo root so (b) unsafe; going (c) gh Pages repo sentr-office"
+   "status": "DONE — mac auto-builder, 2026-08-07 13:33 UTC: LIVE at https://daniellax0.github.io/sentr-office/ (route c: public repo sentr-office + Pages; passcode gate, noindex, no secrets). Standing rule in nightbuilder.sh: every wake regen_office_data.py + push refreshes runway/log/board"
   }
  ]
 }
