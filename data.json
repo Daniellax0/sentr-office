@@ -1,16 +1,7 @@
 {
- "generatedAt": "2026-08-07T19:39:38Z",
- "runway": 70,
+ "generatedAt": "2026-08-07T19:56:49Z",
+ "runway": 78,
  "log": [
-  "- 2026-08-07 14:34 UTC . pushbot . PR OPENED for night/auto-20260807-1402",
-  "- 2026-08-07 14:34 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 14:49 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-07 15:00 UTC · bridge worker wake#4 · PUSHBOT VERIFIED: 1223 (3 commits) + 1402 on origin, PR #2 opened — founder's phone now shows real code. pushbot upgraded: PRs now open for EVERY pushed night/* branch (1223's PR lands next wake). #12 'spec gap' settled: text EXISTS at design_handoff README:485 — board row now carries the receipt",
-  "- 2026-08-07 15:01 UTC · finance desk · runway 57% -> 62% · receipts: #5 DONE 6f819a9 (engine-side after canon-warden rightly killed the on-device prose-scorer — the law held under pressure), 1223+1402 pushed, PR #2 live, #6 claimed 14:50 on 1449 per SPEC 0004 · bands hold: late Sept aggressive / mid-late Oct realistic · top risk unchanged: beta Sun, 0 recruits",
-  "- 2026-08-07 15:06 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 15:21 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-07 15:24 UTC . pushbot . PR OPENED for night/auto-20260807-1223",
-  "- 2026-08-07 15:24 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 15:39 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 15:53 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 16:06 UTC · bridge worker wake#5 · #11 SPEC READY (patches/0005): GhostQuestionScreen unwired (wiring_test:200 vs zero production callers) + 'interview' unclassified in QuestionBox (question_box.dart:129 vs interview_session.dart:119) — seam, collision rules, DoD specified. #4 claim marked STALE (4h, no commit). #9 sharpened to FINAL GATE ONLY (suite never re-ran on 1223 after b2713e5). #15 ADDED: care-floor sentence missing on purchase screen (found honestly by #6 — frame 10 unshootable; canon says the sentence belongs there)",
@@ -41,7 +32,16 @@
   "- 2026-08-07 19:24 UTC . mac auto-builder v3.0 . #13 DONE (c684466, night/auto-20260807-1856): closed five, separate store, BetaEvent sealed at 8 untouched. Seams wired: opens ghost_app.dart:100 (before opened(), first run never counts), runCardsSpoken beta_flow.dart:191,231,278 off recordSeen first-appearance; installs read-only passthrough. SKIPPED honestly: wagerSettleReturn (resolvedWagerCount never written), mementoHolds (no memento surface in lib/). analyze clean, suite +2456 ~3 green . days-closer: 0.5",
   "- 2026-08-07 19:24 UTC . mac auto-builder v3.0 . wake 1856 finished: #4/#13/#15 DONE on night/auto-20260807-1856 (2e239a3, c684466), pushed, PR #8 -> beta-2. No OPEN code items remain (#8 icon awaits founder; #11/#12 in flight elsewhere)",
   "- 2026-08-07 19:24 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 19:39 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-07 19:39 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 20:05 UTC · finance desk · runway 70% -> 78% · receipts: #4 DONE c684466 (shrugs are now live counts on the engines' own gates), #13 DONE c684466 (five counters, sealed enum untouched), #15 DONE 2e239a3 (care-floor sentence + law test, warden PASS citing owner ruling 2 Aug), PR #8 open, 12 of 15 board items DONE, builder days-closer 9.5 today · remaining code: #11+#12 in flight · remaining founder: icon, HealthKit ruling, card-one scalar, BETA RECRUITS (Sun, 0 — the only gap no robot closes)",
+  "- 2026-08-07 19:41 UTC . mac auto-builder v3.0 . wake 1939 finished: no OPEN code items to claim (#8 icon awaits founder; #11/#12 in flight in other worktrees, #12 progressing — PR #7 up 18:41). Prior wake 1856 verified pushed with PR #8; office data.json regenerated+pushed 19:39Z by standing rule. No commits made, no ipa (all-DONE condition unmet). days-closer: 0.0",
+  "- 2026-08-07 19:41 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 19:41 UTC . pushbot . PRs #5+#7 re-based onto release/sentr-1.0 - founder sees only the real diff now",
+  "- 2026-08-07 19:41 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 20:12 UTC · bridge worker · FOUNDER ORDER relayed verbatim: perfect the app, 1,000 different tests, fix what doesn't work until she returns → board #16 HARDENING MODE opened with 8 rotating lanes + fix-same-wake rule + running counter. #11/#12 finish first; every free wake belongs to #16. Cloud worker verifies the counter honestly each hour (claimed tests must exist as real asserts on disk)",
+  "- 2026-08-07 20:27 UTC · finance desk · FULL RECOMPUTE on founder demand · launch bands MOVED: aggressive 12–20 Sept (was late Sept), realistic 22 Sept–10 Oct (was mid–late Oct, pulled ~2 wks) · receipts: 12/15 items DONE in one day, days-closer 9.5, all launch assets exist (screenshots on disk fd57409, §15b closed 6dfa4ec, pre-audit done 081e6ae, import law f2636dc), remaining robot work #11/#12 hours not weeks, hardening #16 runs off critical path · worst case re-dated: kill criterion at beta read-out (~24–31 Aug) → finding-path rebuild → early Dec, Christmas dead zone makes it EFFECTIVELY MID-JANUARY · worst-case probability is now a RECRUITING variable, not a code variable: with 8–10 testers by Sunday ≈ 15–20% (kill-criterion base rate); with 0 testers the December door becomes the default (launch unvalidated = the 100 DKK failure band, or wait) · M6 revenue bands unchanged: fail ~100 / realistic ~1,750 / exceptional 15–18k DKK · the raise (€600k–1.5M) remains the real six-month prize via the two proofs",
+  "- 2026-08-07 20:36 UTC · bridge worker · FOUNDER ORDER (verbatim in board #17): 1,000 monthly payers, no settling; user-based tests; solved by EVERY means by midnight; 2,500 tomorrow. Sprint armed: #17 conversion+persona walks (fix-same-wake), #18 demo site + export-guide SEO + share card (the distribution side of the payer math — 1,000 payers ≈ 29–33k installs at the earned ask), #16 continues as retention. Deadline 22:00 UTC = midnight Copenhagen; readiness report to founder then. Honest ledger note: robots build the MEANS — installs and payers walk through them at launch; nothing here mints users tonight, it makes the funnel worthy of them",
+  "- 2026-08-07 19:56 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -118,6 +118,21 @@
    "n": 15,
    "task": "Care-floor sentence MISSING on the membership/purchase screen (canon: care floor outranks purchase — the sentence belongs on the purchase sheet; found honestly by #6 screenshot work — frame 10 unshootable without it; adjacent to #10 fix-first 3.1.2). One sentence + its law test.",
    "status": "DONE — mac auto-builder, 2026-08-07 19:24 UTC, branch night/auto-20260807-1856 (2e239a3). Sentence renders unconditionally; law test proves empty-store AND active-plan cases; warden PASS citing owner ruling 2026-08-02 (copy claims only wired machinery — mayIntervene takes no plan). Warden note: the install-manifest half of doctrine 4 remains open work (no Memento manifest exists yet — not owed by this diff)"
+  },
+  {
+   "n": 16,
+   "task": "HARDENING MODE — FOUNDER ORDER 20:10 UTC: \"perfect the app, run 1000 different tests, fix what doesn't work until I get home.\" Grow a NEW test army to 1,000+ distinct checks BEYOND the existing suite; FIX every red on the same branch, same wake; repeat every wake until the founder lifts this. Lanes — rotate one per wake, name the lane in the LOG: (a) import fuzz: malformed/truncated/empty/nested zips, wrong JSON shapes, 0-byte and huge synthetic corpora (generate in tmp at test-time; NEVER commit fixtures >1MB); (b) parser edges: locales, emoji, RTL, 10-year spans, duplicate/out-of-order timestamps; (c) law adversarial: hostile inputs against every law in test/laws/ — NEVER weaken a law to green a test, a red law test is a product bug to fix; (d) UI walks: every screen boots empty / one-item / huge via the showSampleData seam + integration_test; (e) money paths: paywall states, Restore Purchases, §15b deletion, annual seal, care-floor renders under every plan state; (f) failure states: broken-source ring, quiet-sources door, interrupted-import resume; (g) perf gates: shape-law ratios on 3 corpus sizes, no regression past measured 1.0–1.35/MB; (h) cold boot, first-run, onboarding invariants. Rules: canon + CLAUDE.md bind every test; all work on night/* branches; the FULL suite ends green every wake; per-wake LOG line: \"hardening round N (lane): +X tests, reds found→fixed, suite total\"; update RUNNING COUNT on this row each wake. RUNNING COUNT: 0 / 1000.",
+   "status": "OPEN — TOP PRIORITY after #11/#12 land"
+  },
+  {
+   "n": 17,
+   "task": "THE 1,000-PAYER MANDATE — FOUNDER ORDER 20:35 UTC, verbatim: \"build a product that will definitely be able to have 1000 monthly paying users, and not settle for less… run user based tests… by midnight they should've solved this by EVERY means possible… tomorrow we double to 2500.\" MIDNIGHT SPRINT: deadline 22:00 UTC (= midnight Copenhagen); readiness report due then. The math this must serve: 1,000 payers at the ~3–3.5% earned-ask conversion ≈ 29–33k installs — so every wake attacks BOTH sides: (i) CONVERSION — simulated user-based tests: persona walks (the skeptic, the privacy-reader, the Passive cohort, the data-hoarder) through onboarding → export → import → card one → paywall as integration tests in the hostile_beta_walkthrough pattern; every friction/confusion/dead-end found = FIXED SAME WAKE; every plan-state of the paywall exercised; (ii) RETENTION — #16 hardening continues as the keep-users lane. Canon binds: no engagement mechanics, no streaks, no dark patterns — conversion comes from the finding being undeniable and the ask arriving earned. Tomorrow the bar doubles to 2,500 payers (≈60–70k installs): same assets, bigger funnel — plan for it, don't rebuild for it.",
+   "status": "OPEN — TOP PRIORITY, every wake until 22:00 UTC"
+  },
+  {
+   "n": 18,
+   "task": "THE DEMO SITE — the acquisition machine robots can ship TONIGHT (no App Store gate): static site, own public Pages repo (sentr-demo), per FIXES_BACKTESTED fix #2: drag your ChatGPT conversations.json export onto the page → ONE real finding with receipts in ~30s, computed CLIENT-SIDE in a web worker, works offline after load (\"turn on airplane mode, then drop the file\" is the trust demo), honest label: the shallow version — the app goes deeper and keeps the record. Plus: the four export guides (#7, drafts in deliverables/export_guides.md) published as pages — the GDPR/SEO channel; share-card mint (count-based, anonymized-by-construction template). Laws: no uploads, no analytics, no secrets/repo code in the payload, findings phrased counts-never-verdicts, floors respected. Publish → URL IN CAPS in LOG. Cloud worker drafts v1 HTML; builder publishes + iterates.",
+   "status": "OPEN — SPRINT"
   }
  ]
 }
