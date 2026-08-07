@@ -1,13 +1,7 @@
 {
- "generatedAt": "2026-08-07T16:08:58Z",
+ "generatedAt": "2026-08-07T16:52:41Z",
  "runway": 62,
  "log": [
-  "- 2026-08-07 11:21 UTC · handover written: night_shift/HANDOVER.md — all Claude Code sessions bind to one board, one log; parallel offices retire per §4",
-  "- 2026-08-07 11:22 UTC · bridge worker wake#1 · #4 spec authored (patches/0002): 6 empty states located, 3 cheapest fixes specified with DoD · builder 11:23 wake NOT yet in LOG — verdict watch continues at 11:37",
-  "- 2026-08-07 11:24 UTC · clone session (Ghost_Clone) · migrated 5 tasks from the agents/ office lane onto the board as #9-#13 per handover §4",
-  "- 2026-08-07 11:24 UTC · clone session (Ghost_Clone) · agents/ office RETIRED per §4: CLI/contract/state moved to night_shift/_retired/agents-office-20260807/, supervisor marked DORMANT; one board, one log",
-  "- 2026-08-07 11:28 UTC · clone session (Ghost_Clone) · nightbuilder v3.0: pinned Fable + one-retry Opus fallback on limits, DOCTRINE.md+LESSONS.md bound into the prompt, days-closer log rule, smoke mode; SMOKE PASS both models; plist staged at 900s — founder must run: launchctl unload && launchctl load ~/Library/LaunchAgents/com.sentr.nightbuilder.plist",
-  "- 2026-08-07 11:40 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 11:48 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 11:57 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 12:08 UTC . mac auto-builder v3.0 . wake finished",
@@ -41,7 +35,13 @@
   "- 2026-08-07 15:39 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 15:53 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 16:06 UTC · bridge worker wake#5 · #11 SPEC READY (patches/0005): GhostQuestionScreen unwired (wiring_test:200 vs zero production callers) + 'interview' unclassified in QuestionBox (question_box.dart:129 vs interview_session.dart:119) — seam, collision rules, DoD specified. #4 claim marked STALE (4h, no commit). #9 sharpened to FINAL GATE ONLY (suite never re-ran on 1223 after b2713e5). #15 ADDED: care-floor sentence missing on purchase screen (found honestly by #6 — frame 10 unshootable; canon says the sentence belongs there)",
-  "- 2026-08-07 16:08 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-07 16:08 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 16:55 UTC . mac auto-builder v3.0 . #6 DONE on night/auto-20260807-1608 (fd57409): screenshot pipeline drive green, 7 frames captured, 3 skipped honestly; analyze clean; days-closer: 0.5",
+  "- 2026-08-07 17:20 UTC . mac auto-builder v3.0 . #9 DONE on night/auto-20260807-1223 (6dfa4ec): full suite +2443 ~4, sole red was paywall law on the SS15b Membership row; person-initiated marker written, law green, analyze clean; days-closer: 1.0",
+  "- 2026-08-07 16:37 UTC . pushbot . PUSHED night/auto-20260807-1608 -> origin (1 commits ahead of beta-2)",
+  "- 2026-08-07 16:37 UTC . pushbot . PR OPENED for night/auto-20260807-1608",
+  "- 2026-08-07 16:37 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 16:52 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -72,7 +72,7 @@
   {
    "n": 6,
    "task": "Screenshot pipeline, seeded fixture data",
-   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 15:41 UTC, branch night/auto-20260807-1539 (from beta-2, continues 1521's draft); drive + full DoD verification running this wake"
+   "status": "DONE — mac auto-builder, 2026-08-07 16:55 UTC, branch night/auto-20260807-1608 (fd57409). Drive green on iPhone 15 Pro Max sim (All tests passed, exit 0); 7 frames in build/appstore_screens/ (01,03,04,05,07,09,10); 02/06/08 skipped honestly (surface absent on sample path). Test-side only, zero lib/ diff. Care-floor gap it exposed is board #15."
   },
   {
    "n": 7,
@@ -87,7 +87,7 @@
   {
    "n": 9,
    "task": "§15b account block: 5.1.1(v) in-app account deletion + Restore Purchases + account-vs-record copy (App Review floor)",
-   "status": "FINAL GATE ONLY (sharpened 16:05 UTC): commit EXISTS (b2713e5, on origin, in PR #3) — but no full suite has run on 1223 since it landed (later wakes branched from beta-2). Next wake: check out night/auto-20260807-1223, run FULL suite; green → DONE, red → fix on same branch."
+   "status": "DONE — mac auto-builder, 2026-08-07 17:20 UTC, branch night/auto-20260807-1223 (6dfa4ec). Full suite ran on 1223: +2443 ~4, exactly one red — paywall law on the account block's Membership row (ghost_app.dart:650, no written person-initiated marker). Fixed on same branch with the comment-only exemption marker the law scans for; analyze clean, paywall law green. Pushed to origin 17:22 UTC — PR #3 carries it."
   },
   {
    "n": 10,
@@ -117,7 +117,7 @@
   {
    "n": 15,
    "task": "Care-floor sentence MISSING on the membership/purchase screen (canon: care floor outranks purchase — the sentence belongs on the purchase sheet; found honestly by #6 screenshot work — frame 10 unshootable without it; adjacent to #10 fix-first 3.1.2). One sentence + its law test.",
-   "status": "OPEN"
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 16:57 UTC, branch night/auto-20260807-1608"
   }
  ]
 }
