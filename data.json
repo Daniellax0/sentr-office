@@ -1,11 +1,7 @@
 {
- "generatedAt": "2026-08-07T21:17:14Z",
+ "generatedAt": "2026-08-07T21:38:21Z",
  "runway": 78,
  "log": [
-  "- 2026-08-07 16:37 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 16:52 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-07 17:19 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 17:34 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 17:55 UTC . pushbot . PUSHED night/release-wiring-20260807 -> origin (53 commits ahead of beta-2)",
   "- 2026-08-07 17:55 UTC . pushbot . PR OPENED for night/release-wiring-20260807",
   "- 2026-08-07 17:55 UTC . mac auto-builder v3.0 . wake finished",
@@ -41,7 +37,11 @@
   "- 2026-08-07 20:41 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 20:53 UTC · bridge worker wake#9 · #18 DEMO SITE v1 BUILT + STAGED VERIFIED (index 17,903B md5 b6a2465c, guides 8,456B md5 413f4d1c): drag-drop ChatGPT zip/json → web-worker counting → one finding w/ receipts (floors ≥5×≥30d, honest abstain) + share-card mint + airplane-mode trust demo + HowTo schema on guides (6× stack L2/L3 built in). Tested in cloud on synthetic fixtures. Builder publishes per board #18. Transfer lesson learned: device_commit_files is the byte-perfect path, chunk relays retired",
   "- 2026-08-07 21:02 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 21:17 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-07 21:17 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 21:38 UTC . mac auto-builder v3.0 . board #18 DEMO SITE PUBLISHED: LIVE AT HTTPS://DANIELLAX0.GITHUB.IO/SENTR-DEMO/ (guides at /SENTR-DEMO/GUIDES.HTML). Public repo sentr-demo + Pages; payload law-scanned (no egress/analytics/secrets), served md5 == staged md5 (b6a2465c/413f4d1c) — byte-perfect. Iteration candidate logged: vendor jszip to drop the CDN dependency. days-closer: 1.5",
+  "- 2026-08-07 21:52 UTC . mac auto-builder v3.0 . board #18 iteration: jszip 3.10.1 vendored into sentr-demo (sha512 verified vs cdnjs SRI), CDN script tag dropped — no third-party requests at all now; live verified (index md5 0b57ad15, jszip 200). deliverables/demo_site synced. days-closer: 0.0",
+  "- 2026-08-07 21:23 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 21:38 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -127,12 +127,12 @@
   {
    "n": 17,
    "task": "THE 1,000-PAYER MANDATE — FOUNDER ORDER 20:35 UTC, verbatim: \"build a product that will definitely be able to have 1000 monthly paying users, and not settle for less… run user based tests… by midnight they should've solved this by EVERY means possible… tomorrow we double to 2500.\" MIDNIGHT SPRINT: deadline 22:00 UTC (= midnight Copenhagen); readiness report due then. The math this must serve: 1,000 payers at the ~3–3.5% earned-ask conversion ≈ 29–33k installs — so every wake attacks BOTH sides: (i) CONVERSION — simulated user-based tests: persona walks (the skeptic, the privacy-reader, the Passive cohort, the data-hoarder) through onboarding → export → import → card one → paywall as integration tests in the hostile_beta_walkthrough pattern; every friction/confusion/dead-end found = FIXED SAME WAKE; every plan-state of the paywall exercised; (ii) RETENTION — #16 hardening continues as the keep-users lane. Canon binds: no engagement mechanics, no streaks, no dark patterns — conversion comes from the finding being undeniable and the ask arriving earned. Tomorrow the bar doubles to 2,500 payers (≈60–70k installs): same assets, bigger funnel — plan for it, don't rebuild for it.",
-   "status": "IN PROGRESS — mac auto-builder wake 2041, 2026-08-07 20:45 UTC, branch night/auto-20260807-2041 (carries wake 1956's uncommitted persona-walk work forward): verifying analyze + full suite, then commit/push/PR"
+   "status": "IN PROGRESS — mac auto-builder wake 2117, 2026-08-07 21:18 UTC, branch night/auto-20260807-2117 from beta-2 (carries the uncommitted persona-walk work forward): analyze clean, verifying full suite, then commit/push/PR"
   },
   {
    "n": 18,
    "task": "THE DEMO SITE — the acquisition machine robots can ship TONIGHT (no App Store gate): static site, own public Pages repo (sentr-demo), per FIXES_BACKTESTED fix #2: drag your ChatGPT conversations.json export onto the page → ONE real finding with receipts in ~30s, computed CLIENT-SIDE in a web worker, works offline after load (\"turn on airplane mode, then drop the file\" is the trust demo), honest label: the shallow version — the app goes deeper and keeps the record. Plus: the four export guides (#7, drafts in deliverables/export_guides.md) published as pages — the GDPR/SEO channel; share-card mint (count-based, anonymized-by-construction template). Laws: no uploads, no analytics, no secrets/repo code in the payload, findings phrased counts-never-verdicts, floors respected. Publish → URL IN CAPS in LOG. Cloud worker drafts v1 HTML; builder publishes + iterates.",
-   "status": "OPEN — SPRINT — V1 STAGED VERIFIED (md5 b6a2465c/413f4d1c, ~20:57 UTC): worker-tested in cloud (floors abstain correctly; theme finder verified on synthetic fixtures). BUILDER: create public repo sentr-demo, publish BOTH files (index.html, guides.html) to Pages, URL IN CAPS in LOG, verify payload law-clean first"
+   "status": "DONE — mac auto-builder wake 2117, 2026-08-07 21:38 UTC: LIVE at https://daniellax0.github.io/sentr-demo/ (public repo sentr-demo, Pages). Payload law-verified before publish (no fetch/upload/analytics/secrets; only schema.org vocab URLs); v1 published byte-perfect vs staged md5 (b6a2465c/413f4d1c), then iterated same wake: jszip 3.10.1 vendored (SRI-verified) — zero third-party requests. guides.html live at /sentr-demo/guides.html"
   },
   {
    "n": 19,
