@@ -1,15 +1,7 @@
 {
- "generatedAt": "2026-08-07T18:10:35Z",
- "runway": 62,
+ "generatedAt": "2026-08-07T18:56:27Z",
+ "runway": 70,
  "log": [
-  "- 2026-08-07 13:25 UTC . mac auto-builder v3.0 . #10 DONE on night/auto-20260807-1223 (081e6ae, via release-captain): docs/APP_REVIEW_PREAUDIT.md - hostile guideline pass w/ file:line evidence, privacy-nutrition from zero-egress law, reviewer notes + 2-min demo path; blocking find: HealthKit entitlement absent while GhostHealthKit.swift ships live (2.1 reject, FOUNDER DECISION); 7 FIX FIRST incl. paywall missing privacy/terms links (3.1.2) and Sentry deciding the crash-data label; docs-only, no Flutter gate . days-closer: 4.0",
-  "- 2026-08-07 12:51 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 13:06 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-07 13:11 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 13:26 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-07 13:27 UTC · bridge worker · #14 added FOUNDER PRIORITY: publish the live office (payload staged in deliverables/office_live) — URL to be minted by next builder wake and logged in caps",
-  "- 2026-08-07 13:33 UTC . mac auto-builder v3.0 . #14 DONE: LIVE OFFICE PUBLISHED AT HTTPS://DANIELLAX0.GITHUB.IO/SENTR-OFFICE/ (public repo sentr-office, GitHub Pages, passcode-gated, noindex; netlify CLI absent, Ghost_Deploy mid-cherry-pick so route c). Standing rule wired into nightbuilder.sh: every wake regen_office_data.py refreshes data.json (runway/log/board) + push. No secrets in payload, verified . days-closer: 0.0",
-  "- 2026-08-07 13:47 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 13:52 UTC · bridge worker · ROOT CAUSE of empty GitHub on founder's phone: model-side push silently failed every wake (5 local night/* branches, 0 on origin). PUSHBOT spliced into nightbuilder.sh: deterministic push of night/* branches each wake + PR if gh exists. Expect night/auto-20260807-1223 (f2636dc #3 + 081e6ae #10) on origin at next wake (~14:05).",
   "- 2026-08-07 13:57 UTC · bridge worker wake#3 · #6 SPEC READY (patches/0004): boot seam located (SentrApp showSampleData, hostile_beta_walkthrough:68 pattern), driver + 10 App Store frames + DoD specified; no lib/ diffs allowed",
   "- 2026-08-07 13:58 UTC · finance desk · runway 50% -> 57% · receipts: #3 DONE f2636dc (import 77s->6.4s), #10 DONE 081e6ae (pre-audit, HealthKit 2.1 caught pre-submission), #14 DONE (live office URL published), #9 committed b2713e5 suite-pending, #5 built on 1326 suite-in-flight · launch bands hold: late Sept aggressive / mid-late Oct realistic · biggest non-code risk unchanged: beta recruits (Sun 10 Aug, 0 confirmed)",
@@ -41,7 +33,15 @@
   "- 2026-08-07 17:55 UTC . pushbot . PUSHED night/release-wiring-20260807 -> origin (53 commits ahead of beta-2)",
   "- 2026-08-07 17:55 UTC . pushbot . PR OPENED for night/release-wiring-20260807",
   "- 2026-08-07 17:55 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 18:10 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-07 18:10 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 17:16 UTC · bridge worker wake#6 · VERIFIED: #6 DONE real (fd57409, 7 PNGs on disk, PR #4) · #9 DONE real (6dfa4ec on 1223 and origin, suite 2443 green, PR #3) · #4 re-claim worked (16:59, 1652) · #15 in flight, warden blocked one overclaim. #13 SPEC READY (patches/0006): closed BetaEvent enum (beta_telemetry.dart:10, owner-ruled) routed around with separate store. (Flushed 18:1x — bridge dropped 17:14 mid-write)",
+  "- 2026-08-07 17:17 UTC · finance desk · runway 62% -> 70% · receipts: #6 DONE fd57409 (App Store screenshots exist on disk), #9 DONE 6dfa4ec (App Review floor closed, suite 2443 green), PRs #2/#3/#4 open · late Sept aggressive STRENGTHENING · top risk: beta Sun 10 Aug, 0 recruits. (Flushed on reconnect)",
+  "- 2026-08-07 18:41 UTC . pushbot . PUSHED night/auto-20260807-1810 -> origin (1 commits ahead of beta-2)",
+  "- 2026-08-07 18:41 UTC . pushbot . PUSHED night/failure-states-20260807-1810 -> origin (53 commits ahead of beta-2)",
+  "- 2026-08-07 18:41 UTC . pushbot . PR OPENED for night/auto-20260807-1810",
+  "- 2026-08-07 18:41 UTC . pushbot . PR OPENED for night/failure-states-20260807-1810",
+  "- 2026-08-07 18:41 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 18:56 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -62,7 +62,7 @@
   {
    "n": 4,
    "task": "Empty-state audit on beta path, fix cheapest three",
-   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 17:42 UTC, wake 1734: prior wake's A/B/C implementation found uncommitted on 1608 worktree; verifying (analyze clean, targeted tests green, full suite running)"
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 18:12 UTC, wake 1810: inherited 1734's uncommitted work on branch night/auto-20260807-1810; re-running full gate (analyze + suite) before commit"
   },
   {
    "n": 5,
@@ -102,12 +102,12 @@
   {
    "n": 12,
    "task": "Broken-source failure states per handoff \"When Sentr fails\" (source row red dashed ring + Today line, never blocks)",
-   "status": "OPEN — SPEC EXISTS, settled 15:00 UTC: design_handoff_sentr/README.md:485-506 verbatim (dashed rgba(169,48,40,.7) ring + exact copy + Today line + 3 failure rules); the earlier \"spec gap\" flag looked in the wrong place. Implement from that text."
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 18:22 UTC, wake 1810: slice-builder dispatched in worktree /private/tmp/ghost_failure_states_1810, branch night/failure-states-20260807-1810 stacked on PR #5's wiring branch; broken = ledger-imported AND permission now revoked (status-only checks), copy from real ledger timestamps, never faked"
   },
   {
    "n": 13,
    "task": "On-device conversion counters (opens, run cards spoken, wager settle-return, installs, Memento holds) - zero new egress",
-   "status": "OPEN"
+   "status": "OPEN — SPEC READY (patches/0006, 17:15 UTC): closed-enum ruling respected (separate store, beta_telemetry pattern), 5 seams + storage contract + law test + DoD specified"
   },
   {
    "n": 14,
@@ -117,7 +117,7 @@
   {
    "n": 15,
    "task": "Care-floor sentence MISSING on the membership/purchase screen (canon: care floor outranks purchase — the sentence belongs on the purchase sheet; found honestly by #6 screenshot work — frame 10 unshootable without it; adjacent to #10 fix-first 3.1.2). One sentence + its law test.",
-   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 17:42 UTC, wake 1734: sentence + law test implemented, analyze clean, law green; full suite running before commit"
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 18:12 UTC, wake 1810: inherited 1734's uncommitted work on branch night/auto-20260807-1810; re-running full gate (analyze + suite) before commit"
   }
  ]
 }
