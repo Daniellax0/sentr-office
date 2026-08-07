@@ -1,15 +1,7 @@
 {
- "generatedAt": "2026-08-07T21:59:27Z",
+ "generatedAt": "2026-08-07T22:27:53Z",
  "runway": 80,
  "log": [
-  "- 2026-08-07 17:16 UTC · bridge worker wake#6 · VERIFIED: #6 DONE real (fd57409, 7 PNGs on disk, PR #4) · #9 DONE real (6dfa4ec on 1223 and origin, suite 2443 green, PR #3) · #4 re-claim worked (16:59, 1652) · #15 in flight, warden blocked one overclaim. #13 SPEC READY (patches/0006): closed BetaEvent enum (beta_telemetry.dart:10, owner-ruled) routed around with separate store. (Flushed 18:1x — bridge dropped 17:14 mid-write)",
-  "- 2026-08-07 17:17 UTC · finance desk · runway 62% -> 70% · receipts: #6 DONE fd57409 (App Store screenshots exist on disk), #9 DONE 6dfa4ec (App Review floor closed, suite 2443 green), PRs #2/#3/#4 open · late Sept aggressive STRENGTHENING · top risk: beta Sun 10 Aug, 0 recruits. (Flushed on reconnect)",
-  "- 2026-08-07 18:41 UTC . pushbot . PUSHED night/auto-20260807-1810 -> origin (1 commits ahead of beta-2)",
-  "- 2026-08-07 18:41 UTC . pushbot . PUSHED night/failure-states-20260807-1810 -> origin (53 commits ahead of beta-2)",
-  "- 2026-08-07 18:41 UTC . pushbot . PR OPENED for night/auto-20260807-1810",
-  "- 2026-08-07 18:41 UTC . pushbot . PR OPENED for night/failure-states-20260807-1810",
-  "- 2026-08-07 18:41 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 18:56 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 19:25 UTC · bridge worker wake#8 · pushbot PR bases fixed: future PRs choose base by ANCESTRY (release/sentr-1.0 if the branch grew from it — origin has that ref, verified), and a one-shot re-bases PRs #5+#7 next wake so the founder's phone shows the real diff, not 53 commits of noise. Sweep: #13 picked up within the hour (store + law tests staged), #4 gate on 1856 (2nd inheritance without commit — watching for committing discipline), #11 executing warden's Candidate B, #12 slice-builder in worktree. Builder cadence normal.",
   "- 2026-08-07 19:24 UTC . mac auto-builder v3.0 . #15 DONE (2e239a3, night/auto-20260807-1856): care-floor sentence unconditional on membership_screen.dart + law test (empty store AND active plan); canon-warden PASS citing owner ruling 2026-08-02; the refund-thread-that-draws-App-Review class pre-closed . days-closer: 1.0",
   "- 2026-08-07 19:24 UTC . mac auto-builder v3.0 . #4 DONE (c684466, night/auto-20260807-1856): three shrugs now live counts sharing the engines' own gates (traits corpusExtent, character nearest sampleSize, evaluation patternGate) + quiet sources door; warden PASS on renders-strings provenance . days-closer: 0.5",
@@ -41,7 +33,15 @@
   "- 2026-08-07 21:40 UTC · clone session (Ghost_Clone) · builder models: Fable retired to save tokens; claude-opus-5 primary, claude-sonnet-5 one-retry on limits, from the next wake (the live wake finishes on Fable)",
   "- 2026-08-07 21:44 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 21:56 UTC · bridge worker wake#10 · #18 VERIFIED LIVE FROM CLOUD: https://daniellax0.github.io/sentr-demo/ — HTTP 200, served md5 0b57ad15 matches builder's, guides 200, jszip vendored (ZERO third-party requests — the airplane-mode demo is now literally true on first load) · finance: runway 78% -> 80% (demo = second launch asset live; the fix-2 distribution engine EXISTS at a URL) · #17 gates running (suite + on-simulator persona walks, iPhone 17 Pro Max) · #11 warden blocked route-1, rerouting · builder healthy · noted: clone session switched builder models (opus-5 primary/sonnet-5 retry) for token economics",
-  "- 2026-08-07 21:59 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-07 21:59 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 22:00 UTC · clone session (Ghost_Clone) · phone preview installed: beta-2 + night branches 1223/1402/1608/1856 merged locally (preview/phone-20260807, NOTHING pushed), analyze clean, full suite green, --profile build on founder's device — the 5 PRs still await her merge gate",
+  "- 2026-08-07 22:02 UTC · clone session · CORRECTION: phone preview was built from beta-2 = the OLD shell (trunks never merged); founder's phone RESTORED to release/sentr-1.0 paper app (amendments 1-5). Lesson: no phone install from beta-2 lineage until the release→beta-2 merge lands (board #11)",
+  "- 2026-08-07 22:05 UTC · clone session · #21 trunk merge claimed: release day-branch merged into beta-2 on night/trunk-merge-20260808 (6 conflicts, beta-2 side kept), analyze at release baseline (18 known), full merged suite running",
+  "- 2026-08-07 22:12 UTC . pushbot . PUSHED night/trunk-merge-20260808 -> origin (55 commits ahead of beta-2)",
+  "- 2026-08-07 22:12 UTC . pushbot . PR OPENED for night/trunk-merge-20260808 (base release/sentr-1.0)",
+  "- 2026-08-07 22:12 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 22:20 UTC · clone session · #21 VERDICT: trunks are two different apps; textual merge = conflict markers in 4 old-app files, Frankenstein. Branch abandoned, NOT pushed, nothing installed. Root cause of the founder's 'this is the old app': the office has been building on beta-2 (old dark shell) while her phone runs release/sentr-1.0 (paper shell). #22 opened: port engine work by cherry-pick, REBUILD UI work on paper screens, base release/sentr-1.0 from now on",
+  "- 2026-08-07 22:27 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -110,6 +110,16 @@
    "status": "DONE — mac auto-builder, 2026-08-07 19:24 UTC, branch night/auto-20260807-1856 (c684466). Closed five in a separate store; BetaEvent stays sealed at 8. Wired: opens ghost_app.dart:100 (after first run only), runCardsSpoken beta_flow.dart:191,231,278 off recordSeen first-appearance, installs read-only passthrough. SKIPPED per spec escape clause: wagerSettleReturn (no live settle seam — resolvedWagerCount never written), mementoHolds (no memento surface in lib/). Law test green, warden PASS"
   },
   {
+   "n": 21,
+   "task": "TRUNK MERGE release->beta-2",
+   "status": "BLOCKED — NOT MERGEABLE TEXTUALLY. Clone session proved it 2026-08-08: the two trunks are TWO DIFFERENT APPS (beta-2 = old dark shell: ghost_app/ghost_live_data/membership_screen/ghost_traits_tab; release/sentr-1.0 = paper shell: sentr_phase_a_shell + sentr_proto_* + 5 seam spaces). A textual merge produced committed conflict markers in ghost_app.dart, ghost_live_data.dart, ghost_character_screen.dart, ghost_traits_tab.dart = Frankenstein. Branch night/trunk-merge-20260808 ABANDONED, never pushed. Superseded by #22"
+  },
+  {
+   "n": 22,
+   "task": "PORT THE OFFICE WORK ONTO THE NEW APP — FOUNDER ORDER 2026-08-08: \"everything they have worked on is on the actual new app, not the old\". Base is release/sentr-1.0 (the paper app on her phone) FOREVER; beta-2 is legacy. (a) ENGINE/DATA work transfers as-is - port by cherry-pick: import speedup (f2636dc + language_corpus/memory_import), card-one floor in rank.py (6f819a9), conversion_counters.dart store (c684466), subscription_service annual SKUs. (b) UI work must be REBUILT on paper screens, it does not transfer: §15b account block -> SentrProtoBehaviourScreen (not ghost_app), care-floor sentence -> the paper purchase surface, empty-state live counts -> the paper screens that show them. (c) Each port: own night/ branch off release/sentr-1.0, own PR base release/sentr-1.0, laws + render law green. NOTHING ships to her phone from beta-2 lineage again",
+   "status": "OPEN — TOP PRIORITY, above #16/#17"
+  },
+  {
    "n": 14,
    "task": "PUBLISH THE LIVE OFFICE — FOUNDER PRIORITY, claim before any other OPEN item. Deploy night_shift/deliverables/office_live/ (index.html + data.json, passcode-gated, noindex) to a public URL. Try in order: (a) `netlify` CLI authed → `netlify sites:create` a NEW site (name like sentr-office-<4 random chars>) and `netlify deploy --prod`; (b) sentr-ghost is git-linked → find its source (check Ghost_Deploy/, Sentr_ExportDoor/, netlify.toml anywhere), add /office/ dir, commit+push that repo only; (c) gh CLI authed → new PUBLIC repo sentr-office, push, enable Pages. On success: append the FINAL URL to LOG.md in caps, and add a STANDING RULE to your own wake routine: every wake, regenerate data.json ({generatedAt ISO, runway, log: last 40 LOG.md lines as strings, board: parsed NIGHT_BOARD rows {n,task,status}}) and redeploy/push it. Never place secrets, keys, or the repos' code in the published dir.",
    "status": "DONE — mac auto-builder, 2026-08-07 13:33 UTC: LIVE at https://daniellax0.github.io/sentr-office/ (route c: public repo sentr-office + Pages; passcode gate, noindex, no secrets). Standing rule in nightbuilder.sh: every wake regen_office_data.py + push refreshes runway/log/board"
@@ -122,12 +132,12 @@
   {
    "n": 16,
    "task": "HARDENING MODE — FOUNDER ORDER 20:10 UTC: \"perfect the app, run 1000 different tests, fix what doesn't work until I get home.\" Grow a NEW test army to 1,000+ distinct checks BEYOND the existing suite; FIX every red on the same branch, same wake; repeat every wake until the founder lifts this. Lanes — rotate one per wake, name the lane in the LOG: (a) import fuzz: malformed/truncated/empty/nested zips, wrong JSON shapes, 0-byte and huge synthetic corpora (generate in tmp at test-time; NEVER commit fixtures >1MB); (b) parser edges: locales, emoji, RTL, 10-year spans, duplicate/out-of-order timestamps; (c) law adversarial: hostile inputs against every law in test/laws/ — NEVER weaken a law to green a test, a red law test is a product bug to fix; (d) UI walks: every screen boots empty / one-item / huge via the showSampleData seam + integration_test; (e) money paths: paywall states, Restore Purchases, §15b deletion, annual seal, care-floor renders under every plan state; (f) failure states: broken-source ring, quiet-sources door, interrupted-import resume; (g) perf gates: shape-law ratios on 3 corpus sizes, no regression past measured 1.0–1.35/MB; (h) cold boot, first-run, onboarding invariants. Rules: canon + CLAUDE.md bind every test; all work on night/* branches; the FULL suite ends green every wake; per-wake LOG line: \"hardening round N (lane): +X tests, reds found→fixed, suite total\"; update RUNNING COUNT on this row each wake. RUNNING COUNT: 0 / 1000.",
-   "status": "OPEN — TOP PRIORITY after #11/#12 land"
+   "status": "IN PROGRESS — mac auto-builder wake 2159, 2026-08-07 22:05 UTC, branch night/auto-20260807-2159. Lane (b) parser edges: 47 checks in test/hardening/parser_edges_test.dart (inherited from wake 2138, verified this wake)"
   },
   {
    "n": 17,
    "task": "THE 1,000-PAYER MANDATE — FOUNDER ORDER 20:35 UTC, verbatim: \"build a product that will definitely be able to have 1000 monthly paying users, and not settle for less… run user based tests… by midnight they should've solved this by EVERY means possible… tomorrow we double to 2500.\" MIDNIGHT SPRINT: deadline 22:00 UTC (= midnight Copenhagen); readiness report due then. The math this must serve: 1,000 payers at the ~3–3.5% earned-ask conversion ≈ 29–33k installs — so every wake attacks BOTH sides: (i) CONVERSION — simulated user-based tests: persona walks (the skeptic, the privacy-reader, the Passive cohort, the data-hoarder) through onboarding → export → import → card one → paywall as integration tests in the hostile_beta_walkthrough pattern; every friction/confusion/dead-end found = FIXED SAME WAKE; every plan-state of the paywall exercised; (ii) RETENTION — #16 hardening continues as the keep-users lane. Canon binds: no engagement mechanics, no streaks, no dark patterns — conversion comes from the finding being undeniable and the ask arriving earned. Tomorrow the bar doubles to 2,500 payers (≈60–70k installs): same assets, bigger funnel — plan for it, don't rebuild for it.",
-   "status": "IN PROGRESS — mac auto-builder wake 2138, 2026-08-07 (UTC), branch night/auto-20260807-2138 from beta-2 (carries wake 2117's uncommitted persona-walk work — 2117 had zero commits): self-review done, analyze clean, running full suite, then commit/push/PR"
+   "status": "IN PROGRESS — mac auto-builder wake 2159, 2026-08-07 22:05 UTC, branch night/auto-20260807-2159 from beta-2. Took over wake 2138's uncommitted work (2138 died with zero commits). Self-review CAUGHT A REGRESSION in the inherited paywall diff: it hid BOTH SKUs of the tier you own, so an Essential-monthly subscriber could never reach Essential-annual — canon Pricing, \"Annual exists to halve effective churn\". Fixed: service tracks activeProductId, screen hides only the exact SKU held; +3 guard tests incl. the annual-reachable law for both tiers. analyze clean, full suite running"
   },
   {
    "n": 18,
