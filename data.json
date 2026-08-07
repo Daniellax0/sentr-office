@@ -1,11 +1,7 @@
 {
- "generatedAt": "2026-08-07T21:38:21Z",
- "runway": 78,
+ "generatedAt": "2026-08-07T21:59:27Z",
+ "runway": 80,
  "log": [
-  "- 2026-08-07 17:55 UTC . pushbot . PUSHED night/release-wiring-20260807 -> origin (53 commits ahead of beta-2)",
-  "- 2026-08-07 17:55 UTC . pushbot . PR OPENED for night/release-wiring-20260807",
-  "- 2026-08-07 17:55 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 18:10 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 17:16 UTC · bridge worker wake#6 · VERIFIED: #6 DONE real (fd57409, 7 PNGs on disk, PR #4) · #9 DONE real (6dfa4ec on 1223 and origin, suite 2443 green, PR #3) · #4 re-claim worked (16:59, 1652) · #15 in flight, warden blocked one overclaim. #13 SPEC READY (patches/0006): closed BetaEvent enum (beta_telemetry.dart:10, owner-ruled) routed around with separate store. (Flushed 18:1x — bridge dropped 17:14 mid-write)",
   "- 2026-08-07 17:17 UTC · finance desk · runway 62% -> 70% · receipts: #6 DONE fd57409 (App Store screenshots exist on disk), #9 DONE 6dfa4ec (App Review floor closed, suite 2443 green), PRs #2/#3/#4 open · late Sept aggressive STRENGTHENING · top risk: beta Sun 10 Aug, 0 recruits. (Flushed on reconnect)",
   "- 2026-08-07 18:41 UTC . pushbot . PUSHED night/auto-20260807-1810 -> origin (1 commits ahead of beta-2)",
@@ -41,7 +37,11 @@
   "- 2026-08-07 21:38 UTC . mac auto-builder v3.0 . board #18 DEMO SITE PUBLISHED: LIVE AT HTTPS://DANIELLAX0.GITHUB.IO/SENTR-DEMO/ (guides at /SENTR-DEMO/GUIDES.HTML). Public repo sentr-demo + Pages; payload law-scanned (no egress/analytics/secrets), served md5 == staged md5 (b6a2465c/413f4d1c) — byte-perfect. Iteration candidate logged: vendor jszip to drop the CDN dependency. days-closer: 1.5",
   "- 2026-08-07 21:52 UTC . mac auto-builder v3.0 . board #18 iteration: jszip 3.10.1 vendored into sentr-demo (sha512 verified vs cdnjs SRI), CDN script tag dropped — no third-party requests at all now; live verified (index md5 0b57ad15, jszip 200). deliverables/demo_site synced. days-closer: 0.0",
   "- 2026-08-07 21:23 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 21:38 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-07 21:38 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 21:40 UTC · clone session (Ghost_Clone) · builder models: Fable retired to save tokens; claude-opus-5 primary, claude-sonnet-5 one-retry on limits, from the next wake (the live wake finishes on Fable)",
+  "- 2026-08-07 21:44 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 21:56 UTC · bridge worker wake#10 · #18 VERIFIED LIVE FROM CLOUD: https://daniellax0.github.io/sentr-demo/ — HTTP 200, served md5 0b57ad15 matches builder's, guides 200, jszip vendored (ZERO third-party requests — the airplane-mode demo is now literally true on first load) · finance: runway 78% -> 80% (demo = second launch asset live; the fix-2 distribution engine EXISTS at a URL) · #17 gates running (suite + on-simulator persona walks, iPhone 17 Pro Max) · #11 warden blocked route-1, rerouting · builder healthy · noted: clone session switched builder models (opus-5 primary/sonnet-5 retry) for token economics",
+  "- 2026-08-07 21:59 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -127,7 +127,7 @@
   {
    "n": 17,
    "task": "THE 1,000-PAYER MANDATE — FOUNDER ORDER 20:35 UTC, verbatim: \"build a product that will definitely be able to have 1000 monthly paying users, and not settle for less… run user based tests… by midnight they should've solved this by EVERY means possible… tomorrow we double to 2500.\" MIDNIGHT SPRINT: deadline 22:00 UTC (= midnight Copenhagen); readiness report due then. The math this must serve: 1,000 payers at the ~3–3.5% earned-ask conversion ≈ 29–33k installs — so every wake attacks BOTH sides: (i) CONVERSION — simulated user-based tests: persona walks (the skeptic, the privacy-reader, the Passive cohort, the data-hoarder) through onboarding → export → import → card one → paywall as integration tests in the hostile_beta_walkthrough pattern; every friction/confusion/dead-end found = FIXED SAME WAKE; every plan-state of the paywall exercised; (ii) RETENTION — #16 hardening continues as the keep-users lane. Canon binds: no engagement mechanics, no streaks, no dark patterns — conversion comes from the finding being undeniable and the ask arriving earned. Tomorrow the bar doubles to 2,500 payers (≈60–70k installs): same assets, bigger funnel — plan for it, don't rebuild for it.",
-   "status": "IN PROGRESS — mac auto-builder wake 2117, 2026-08-07 21:18 UTC, branch night/auto-20260807-2117 from beta-2 (carries the uncommitted persona-walk work forward): analyze clean, verifying full suite, then commit/push/PR"
+   "status": "IN PROGRESS — mac auto-builder wake 2138, 2026-08-07 (UTC), branch night/auto-20260807-2138 from beta-2 (carries wake 2117's uncommitted persona-walk work — 2117 had zero commits): self-review done, analyze clean, running full suite, then commit/push/PR"
   },
   {
    "n": 18,
