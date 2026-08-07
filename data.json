@@ -1,11 +1,7 @@
 {
- "generatedAt": "2026-08-07T14:02:23Z",
+ "generatedAt": "2026-08-07T14:49:07Z",
  "runway": 57,
  "log": [
-  "- 2026-08-07 09:40 UTC · wake (manual) · Card One scorer prototype assigned (cloud) — output in its own conversation",
-  "- 2026-08-07 09:48 UTC · wake (manual) · demo website first cut assigned (cloud) — output in its own conversation",
-  "- 2026-08-07 10:05 UTC · wake (manual) · beta ops pack + App Store metadata assigned (cloud) — running",
-  "- 2026-08-07 10:12 UTC · bridge worker (main session) · VERIFIED IN CODE: queue item 1 (annual SKUs) is ALREADY DONE in Ghost_Beta2 — GhostPlan carries monthly+annual product ids per tier, fromProductId fails closed, periodFor exists, membership screen renders \"Yearly\". Credit: founder's own Claude Code sessions. Runway updated 45%→50%.",
   "- 2026-08-07 10:12 UTC · bridge worker · VERIFIED IN CODE: queue item 2 (analyze warning ghost_daily_screen.dart:550) is ALREADY FIXED — future now awaited inside try with explanatory comment.",
   "- 2026-08-07 10:12 UTC · bridge worker · night_shift/ structure created; board seeded below; self-waking hourly from the main session (cron sessions have no Mac bridge — verified today).",
   "- 2026-08-07 10:23 UTC . mac auto-builder . wake",
@@ -39,7 +35,13 @@
   "- 2026-08-07 13:52 UTC · bridge worker · ROOT CAUSE of empty GitHub on founder's phone: model-side push silently failed every wake (5 local night/* branches, 0 on origin). PUSHBOT spliced into nightbuilder.sh: deterministic push of night/* branches each wake + PR if gh exists. Expect night/auto-20260807-1223 (f2636dc #3 + 081e6ae #10) on origin at next wake (~14:05).",
   "- 2026-08-07 13:57 UTC · bridge worker wake#3 · #6 SPEC READY (patches/0004): boot seam located (SentrApp showSampleData, hostile_beta_walkthrough:68 pattern), driver + 10 App Store frames + DoD specified; no lib/ diffs allowed",
   "- 2026-08-07 13:58 UTC · finance desk · runway 50% -> 57% · receipts: #3 DONE f2636dc (import 77s->6.4s), #10 DONE 081e6ae (pre-audit, HealthKit 2.1 caught pre-submission), #14 DONE (live office URL published), #9 committed b2713e5 suite-pending, #5 built on 1326 suite-in-flight · launch bands hold: late Sept aggressive / mid-late Oct realistic · biggest non-code risk unchanged: beta recruits (Sun 10 Aug, 0 confirmed)",
-  "- 2026-08-07 14:02 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-07 14:02 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 14:43 UTC · mac auto-builder v3.0 · #5 DONE (6f819a9, night/auto-20260807-1402): card-one floor landed ENGINE-side in rank.py after canon-warden FAIL on the Dart draft (prose-scoring on device = renders-strings + privacy-policy + no-weighted-sum breaches; fully reverted). Slot-one eligibility ≥5 returns/≥30d, ledger provenance, exact abstention line; scalar formula BLOCKED pending founder ruling. 4 unittests green; warden re-ruled PASS · days-closer: 0.5",
+  "- 2026-08-07 14:34 UTC . pushbot . PUSHED night/auto-20260807-1223 -> origin (3 commits ahead of beta-2)",
+  "- 2026-08-07 14:34 UTC . pushbot . PUSHED night/auto-20260807-1402 -> origin (1 commits ahead of beta-2)",
+  "- 2026-08-07 14:34 UTC . pushbot . PR OPENED for night/auto-20260807-1402",
+  "- 2026-08-07 14:34 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 14:49 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -65,7 +67,7 @@
   {
    "n": 5,
    "task": "Card One selection law (score all candidates at import)",
-   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 13:35 UTC, branch night/auto-20260807-1326, per patches/0003"
+   "status": "DONE — mac auto-builder, 2026-08-07 14:42 UTC, branch night/auto-20260807-1402 (6f819a9). Landed ENGINE-SIDE: canon-warden ruled FAIL on the 1326 Dart draft (on-device prose-scoring broke renders-strings law + privacy policy + rank.py no-weighted-sum); reverted, card-one floor (≥5 returns, ≥30d) added to rank.py as slot-one eligibility with ledger provenance; warden re-ruled PASS. SPEC's scalar formula/multipliers BLOCKED — needs founder ruling amending rank.py doctrine. 4 unittests green; lib/test identical to beta-2"
   },
   {
    "n": 6,
