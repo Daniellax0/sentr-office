@@ -1,14 +1,7 @@
 {
- "generatedAt": "2026-08-07T18:56:27Z",
+ "generatedAt": "2026-08-07T19:39:38Z",
  "runway": 70,
  "log": [
-  "- 2026-08-07 13:52 UTC · bridge worker · ROOT CAUSE of empty GitHub on founder's phone: model-side push silently failed every wake (5 local night/* branches, 0 on origin). PUSHBOT spliced into nightbuilder.sh: deterministic push of night/* branches each wake + PR if gh exists. Expect night/auto-20260807-1223 (f2636dc #3 + 081e6ae #10) on origin at next wake (~14:05).",
-  "- 2026-08-07 13:57 UTC · bridge worker wake#3 · #6 SPEC READY (patches/0004): boot seam located (SentrApp showSampleData, hostile_beta_walkthrough:68 pattern), driver + 10 App Store frames + DoD specified; no lib/ diffs allowed",
-  "- 2026-08-07 13:58 UTC · finance desk · runway 50% -> 57% · receipts: #3 DONE f2636dc (import 77s->6.4s), #10 DONE 081e6ae (pre-audit, HealthKit 2.1 caught pre-submission), #14 DONE (live office URL published), #9 committed b2713e5 suite-pending, #5 built on 1326 suite-in-flight · launch bands hold: late Sept aggressive / mid-late Oct realistic · biggest non-code risk unchanged: beta recruits (Sun 10 Aug, 0 confirmed)",
-  "- 2026-08-07 14:02 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-07 14:43 UTC · mac auto-builder v3.0 · #5 DONE (6f819a9, night/auto-20260807-1402): card-one floor landed ENGINE-side in rank.py after canon-warden FAIL on the Dart draft (prose-scoring on device = renders-strings + privacy-policy + no-weighted-sum breaches; fully reverted). Slot-one eligibility ≥5 returns/≥30d, ledger provenance, exact abstention line; scalar formula BLOCKED pending founder ruling. 4 unittests green; warden re-ruled PASS · days-closer: 0.5",
-  "- 2026-08-07 14:34 UTC . pushbot . PUSHED night/auto-20260807-1223 -> origin (3 commits ahead of beta-2)",
-  "- 2026-08-07 14:34 UTC . pushbot . PUSHED night/auto-20260807-1402 -> origin (1 commits ahead of beta-2)",
   "- 2026-08-07 14:34 UTC . pushbot . PR OPENED for night/auto-20260807-1402",
   "- 2026-08-07 14:34 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 14:49 UTC . mac auto-builder v3.0 . wake",
@@ -41,7 +34,14 @@
   "- 2026-08-07 18:41 UTC . pushbot . PR OPENED for night/auto-20260807-1810",
   "- 2026-08-07 18:41 UTC . pushbot . PR OPENED for night/failure-states-20260807-1810",
   "- 2026-08-07 18:41 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 18:56 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-07 18:56 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 19:25 UTC · bridge worker wake#8 · pushbot PR bases fixed: future PRs choose base by ANCESTRY (release/sentr-1.0 if the branch grew from it — origin has that ref, verified), and a one-shot re-bases PRs #5+#7 next wake so the founder's phone shows the real diff, not 53 commits of noise. Sweep: #13 picked up within the hour (store + law tests staged), #4 gate on 1856 (2nd inheritance without commit — watching for committing discipline), #11 executing warden's Candidate B, #12 slice-builder in worktree. Builder cadence normal.",
+  "- 2026-08-07 19:24 UTC . mac auto-builder v3.0 . #15 DONE (2e239a3, night/auto-20260807-1856): care-floor sentence unconditional on membership_screen.dart + law test (empty store AND active plan); canon-warden PASS citing owner ruling 2026-08-02; the refund-thread-that-draws-App-Review class pre-closed . days-closer: 1.0",
+  "- 2026-08-07 19:24 UTC . mac auto-builder v3.0 . #4 DONE (c684466, night/auto-20260807-1856): three shrugs now live counts sharing the engines' own gates (traits corpusExtent, character nearest sampleSize, evaluation patternGate) + quiet sources door; warden PASS on renders-strings provenance . days-closer: 0.5",
+  "- 2026-08-07 19:24 UTC . mac auto-builder v3.0 . #13 DONE (c684466, night/auto-20260807-1856): closed five, separate store, BetaEvent sealed at 8 untouched. Seams wired: opens ghost_app.dart:100 (before opened(), first run never counts), runCardsSpoken beta_flow.dart:191,231,278 off recordSeen first-appearance; installs read-only passthrough. SKIPPED honestly: wagerSettleReturn (resolvedWagerCount never written), mementoHolds (no memento surface in lib/). analyze clean, suite +2456 ~3 green . days-closer: 0.5",
+  "- 2026-08-07 19:24 UTC . mac auto-builder v3.0 . wake 1856 finished: #4/#13/#15 DONE on night/auto-20260807-1856 (2e239a3, c684466), pushed, PR #8 -> beta-2. No OPEN code items remain (#8 icon awaits founder; #11/#12 in flight elsewhere)",
+  "- 2026-08-07 19:24 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 19:39 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -62,7 +62,7 @@
   {
    "n": 4,
    "task": "Empty-state audit on beta path, fix cheapest three",
-   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 18:12 UTC, wake 1810: inherited 1734's uncommitted work on branch night/auto-20260807-1810; re-running full gate (analyze + suite) before commit"
+   "status": "DONE — mac auto-builder, 2026-08-07 19:24 UTC, branch night/auto-20260807-1856 (c684466). Three static shrugs now live counts sharing the engines' own gates (traits corpusExtent, character sheet nearest sampleSize, evaluation patternGate) + quiet sources door on thin days; canon-warden PASS on renders-strings provenance; analyze clean, suite +2456 ~3 green. Warden advisory (non-blocking): sub-24h import renders \"0 days spanned\" — true but odd"
   },
   {
    "n": 5,
@@ -107,7 +107,7 @@
   {
    "n": 13,
    "task": "On-device conversion counters (opens, run cards spoken, wager settle-return, installs, Memento holds) - zero new egress",
-   "status": "OPEN — SPEC READY (patches/0006, 17:15 UTC): closed-enum ruling respected (separate store, beta_telemetry pattern), 5 seams + storage contract + law test + DoD specified"
+   "status": "DONE — mac auto-builder, 2026-08-07 19:24 UTC, branch night/auto-20260807-1856 (c684466). Closed five in a separate store; BetaEvent stays sealed at 8. Wired: opens ghost_app.dart:100 (after first run only), runCardsSpoken beta_flow.dart:191,231,278 off recordSeen first-appearance, installs read-only passthrough. SKIPPED per spec escape clause: wagerSettleReturn (no live settle seam — resolvedWagerCount never written), mementoHolds (no memento surface in lib/). Law test green, warden PASS"
   },
   {
    "n": 14,
@@ -117,7 +117,7 @@
   {
    "n": 15,
    "task": "Care-floor sentence MISSING on the membership/purchase screen (canon: care floor outranks purchase — the sentence belongs on the purchase sheet; found honestly by #6 screenshot work — frame 10 unshootable without it; adjacent to #10 fix-first 3.1.2). One sentence + its law test.",
-   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 18:12 UTC, wake 1810: inherited 1734's uncommitted work on branch night/auto-20260807-1810; re-running full gate (analyze + suite) before commit"
+   "status": "DONE — mac auto-builder, 2026-08-07 19:24 UTC, branch night/auto-20260807-1856 (2e239a3). Sentence renders unconditionally; law test proves empty-store AND active-plan cases; warden PASS citing owner ruling 2026-08-02 (copy claims only wired machinery — mayIntervene takes no plan). Warden note: the install-manifest half of doctrine 4 remains open work (no Memento manifest exists yet — not owed by this diff)"
   }
  ]
 }
