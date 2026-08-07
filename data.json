@@ -1,0 +1,113 @@
+{
+ "generatedAt": "2026-08-07T13:29:37Z",
+ "runway": 50,
+ "log": [
+  "# Sentr night shift — run log",
+  "Ground truth of what the autonomous line has verified and produced.",
+  "Cloud wakes land their artifacts in their own conversations; this file is the shared memory.",
+  "- 2026-08-07 09:40 UTC · wake (manual) · Card One scorer prototype assigned (cloud) — output in its own conversation",
+  "- 2026-08-07 09:48 UTC · wake (manual) · demo website first cut assigned (cloud) — output in its own conversation",
+  "- 2026-08-07 10:05 UTC · wake (manual) · beta ops pack + App Store metadata assigned (cloud) — running",
+  "- 2026-08-07 10:12 UTC · bridge worker (main session) · VERIFIED IN CODE: queue item 1 (annual SKUs) is ALREADY DONE in Ghost_Beta2 — GhostPlan carries monthly+annual product ids per tier, fromProductId fails closed, periodFor exists, membership screen renders \"Yearly\". Credit: founder's own Claude Code sessions. Runway updated 45%→50%.",
+  "- 2026-08-07 10:12 UTC · bridge worker · VERIFIED IN CODE: queue item 2 (analyze warning ghost_daily_screen.dart:550) is ALREADY FIXED — future now awaited inside try with explanatory comment.",
+  "- 2026-08-07 10:12 UTC · bridge worker · night_shift/ structure created; board seeded below; self-waking hourly from the main session (cron sessions have no Mac bridge — verified today).",
+  "- 2026-08-07 10:23 UTC . mac auto-builder . wake",
+  "- 2026-08-07 10:40 UTC . mac auto-builder . wake finished (see autobuild/out.log)",
+  "- 2026-08-07 10:41 UTC . mac auto-builder v2 . wake",
+  "- 2026-08-07 10:41 UTC . mac auto-builder v2 . wake finished",
+  "- 2026-08-07 11:03 UTC · bridge worker · claimed board #7 (export guides), drafts land next wake",
+  "- 2026-08-07 11:06 UTC · bridge worker · board #8: icon draft delivered (tally mark, paper palette) — CLOSES the auto-reject blocker on approval",
+  "- 2026-08-07 11:10 UTC · bridge worker · board #7 DONE: four export guides drafted (ChatGPT/WhatsApp/Netflix/YouTube + Claude bonus) — distribution gap",
+  "- 2026-08-07 11:17 UTC · finance desk seated · hourly review of runway, revenue and launch bands; changes only on evidence, each with its receipt",
+  "- 2026-08-07 11:21 UTC · handover written: night_shift/HANDOVER.md — all Claude Code sessions bind to one board, one log; parallel offices retire per §4",
+  "- 2026-08-07 11:22 UTC · bridge worker wake#1 · #4 spec authored (patches/0002): 6 empty states located, 3 cheapest fixes specified with DoD · builder 11:23 wake NOT yet in LOG — verdict watch continues at 11:37",
+  "- 2026-08-07 11:24 UTC · clone session (Ghost_Clone) · migrated 5 tasks from the agents/ office lane onto the board as #9-#13 per handover §4",
+  "- 2026-08-07 11:24 UTC · clone session (Ghost_Clone) · agents/ office RETIRED per §4: CLI/contract/state moved to night_shift/_retired/agents-office-20260807/, supervisor marked DORMANT; one board, one log",
+  "- 2026-08-07 11:28 UTC · clone session (Ghost_Clone) · nightbuilder v3.0: pinned Fable + one-retry Opus fallback on limits, DOCTRINE.md+LESSONS.md bound into the prompt, days-closer log rule, smoke mode; SMOKE PASS both models; plist staged at 900s — founder must run: launchctl unload && launchctl load ~/Library/LaunchAgents/com.sentr.nightbuilder.plist",
+  "- 2026-08-07 11:40 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 11:48 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 11:57 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 12:08 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 12:23 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 12:42 UTC · bridge worker wake#2 · #5 SPEC READY (patches/0003): selection point located (beta_flow:230 cards.first), scorer law + floors + DoD specified · v3 CONFIRMED LIVE: 3 wakes since 11:40, #3 suite-in-flight, #4 route-corrected live-path fix in flight, #9 test-first prep",
+  "- 2026-08-07 13:05 UTC . mac auto-builder v3.0 . #3 DONE on night/auto-20260807-1223 (f2636dc): three quadratic passes fixed (preview byCategory, corpus bySpan copies, proposition rescans), 200MB import 77s -> 6.4s, shape law added (per-MB ratio <3.0, measured 1.0-1.35), gate runs two fixtures + prints timings, docs/IMPORT_TIMINGS.md; analyze clean, suite 2440 green, fixture law green . days-closer: 1.5",
+  "- 2026-08-07 13:25 UTC . mac auto-builder v3.0 . #10 DONE on night/auto-20260807-1223 (081e6ae, via release-captain): docs/APP_REVIEW_PREAUDIT.md - hostile guideline pass w/ file:line evidence, privacy-nutrition from zero-egress law, reviewer notes + 2-min demo path; blocking find: HealthKit entitlement absent while GhostHealthKit.swift ships live (2.1 reject, FOUNDER DECISION); 7 FIX FIRST incl. paywall missing privacy/terms links (3.1.2) and Sentry deciding the crash-data label; docs-only, no Flutter gate . days-closer: 4.0",
+  "- 2026-08-07 12:51 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 13:06 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 13:11 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 13:26 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 13:27 UTC · bridge worker · #14 added FOUNDER PRIORITY: publish the live office (payload staged in deliverables/office_live) — URL to be minted by next builder wake and logged in caps"
+ ],
+ "board": [
+  {
+   "n": 1,
+   "task": "Annual SKUs (essential.annual, plus.annual, fail-closed)",
+   "status": "DONE — in beta-2, verified 7 Aug"
+  },
+  {
+   "n": 2,
+   "task": "Analyze warning ghost_daily_screen.dart:550",
+   "status": "DONE — awaited in try, verified 7 Aug"
+  },
+  {
+   "n": 3,
+   "task": "Large-import law: fixture via tool/release_gate.sh + timings",
+   "status": "DONE — branch night/auto-20260807-1223 (f2636dc), 7 Aug: 3 quadratic passes fixed, 200MB 77s→6.4s, shape law + gate timings + docs/IMPORT_TIMINGS.md; suite 2440 green, fixture law green"
+  },
+  {
+   "n": 4,
+   "task": "Empty-state audit on beta path, fix cheapest three",
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 11:52 UTC, branch night/auto-20260807-1140. Route check: spec sites B/C (evaluation/character/daily screens) are sample-data-only or unrouted (app_shell.dart:377 ships GhostApp); live-path equivalent being applied"
+  },
+  {
+   "n": 5,
+   "task": "Card One selection law (score all candidates at import)",
+   "status": "OPEN — SPEC READY (patches/0003) + cloud prototype; needs Mac"
+  },
+  {
+   "n": 6,
+   "task": "Screenshot pipeline, seeded fixture data",
+   "status": "OPEN"
+  },
+  {
+   "n": 7,
+   "task": "Export-guide pages (ChatGPT/WhatsApp/Netflix/YouTube)",
+   "status": "DONE — drafts delivered 11:10 UTC, in chat + night_shift/deliverables"
+  },
+  {
+   "n": 8,
+   "task": "App icon, paper palette",
+   "status": "DRAFT READY — tally mark v1, awaiting founder approval"
+  },
+  {
+   "n": 9,
+   "task": "§15b account block: 5.1.1(v) in-app account deletion + Restore Purchases + account-vs-record copy (App Review floor; spec verbatim in design_handoff_sentr README §15b)",
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 12:55 UTC, branch night/auto-20260807-1223 (block built + wired live, 5 laws green; final suite pending)"
+  },
+  {
+   "n": 10,
+   "task": "App Review pre-audit: hostile guideline pass + privacy-nutrition answers generated from the zero-egress law + reviewer notes/demo path",
+   "status": "DONE — branch night/auto-20260807-1223 (081e6ae), 7 Aug: docs/APP_REVIEW_PREAUDIT.md; BLOCKING founder ruling needed on HealthKit entitlement vs live GhostHealthKit.swift (2.1); 7 FIX FIRST led by paywall privacy/terms links (3.1.2) + Sentry crash-data label"
+  },
+  {
+   "n": 11,
+   "task": "Suite honestly green on release/sentr-1.0 (Ghost_Clone): wire GhostQuestionScreen per production_wiring law; classify 'interview' literal in QuestionBox",
+   "status": "OPEN"
+  },
+  {
+   "n": 12,
+   "task": "Broken-source failure states per handoff \"When Sentr fails\" (source row red dashed ring + Today line, never blocks)",
+   "status": "OPEN"
+  },
+  {
+   "n": 13,
+   "task": "On-device conversion counters (opens, run cards spoken, wager settle-return, installs, Memento holds) - zero new egress",
+   "status": "OPEN"
+  },
+  {
+   "n": 14,
+   "task": "PUBLISH THE LIVE OFFICE — FOUNDER PRIORITY, claim before any other OPEN item. Deploy night_shift/deliverables/office_live/ (index.html + data.json, passcode-gated, noindex) to a public URL. Try in order: (a) `netlify` CLI authed → `netlify sites:create` a NEW site (name like sentr-office-<4 random chars>) and `netlify deploy --prod`; (b) sentr-ghost is git-linked → find its source (check Ghost_Deploy/, Sentr_ExportDoor/, netlify.toml anywhere), add /office/ dir, commit+push that repo only; (c) gh CLI authed → new PUBLIC repo sentr-office, push, enable Pages. On success: append the FINAL URL to LOG.md in caps, and add a STANDING RULE to your own wake routine: every wake, regenerate data.json ({generatedAt ISO, runway, log: last 40 LOG.md lines as strings, board: parsed NIGHT_BOARD rows {n,task,status}}) and redeploy/push it. Never place secrets, keys, or the repos' code in the published dir.",
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 13:29 UTC: netlify CLI absent (a), Ghost_Deploy mid-cherry-pick + publishes repo root so (b) unsafe; going (c) gh Pages repo sentr-office"
+  }
+ ]
+}
