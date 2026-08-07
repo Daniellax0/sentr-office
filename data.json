@@ -1,11 +1,7 @@
 {
- "generatedAt": "2026-08-07T14:49:07Z",
- "runway": 57,
+ "generatedAt": "2026-08-07T15:21:44Z",
+ "runway": 62,
  "log": [
-  "- 2026-08-07 10:12 UTC · bridge worker · VERIFIED IN CODE: queue item 2 (analyze warning ghost_daily_screen.dart:550) is ALREADY FIXED — future now awaited inside try with explanatory comment.",
-  "- 2026-08-07 10:12 UTC · bridge worker · night_shift/ structure created; board seeded below; self-waking hourly from the main session (cron sessions have no Mac bridge — verified today).",
-  "- 2026-08-07 10:23 UTC . mac auto-builder . wake",
-  "- 2026-08-07 10:40 UTC . mac auto-builder . wake finished (see autobuild/out.log)",
   "- 2026-08-07 10:41 UTC . mac auto-builder v2 . wake",
   "- 2026-08-07 10:41 UTC . mac auto-builder v2 . wake finished",
   "- 2026-08-07 11:03 UTC · bridge worker · claimed board #7 (export guides), drafts land next wake",
@@ -41,7 +37,11 @@
   "- 2026-08-07 14:34 UTC . pushbot . PUSHED night/auto-20260807-1402 -> origin (1 commits ahead of beta-2)",
   "- 2026-08-07 14:34 UTC . pushbot . PR OPENED for night/auto-20260807-1402",
   "- 2026-08-07 14:34 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 14:49 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-07 14:49 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-07 15:00 UTC · bridge worker wake#4 · PUSHBOT VERIFIED: 1223 (3 commits) + 1402 on origin, PR #2 opened — founder's phone now shows real code. pushbot upgraded: PRs now open for EVERY pushed night/* branch (1223's PR lands next wake). #12 'spec gap' settled: text EXISTS at design_handoff README:485 — board row now carries the receipt",
+  "- 2026-08-07 15:01 UTC · finance desk · runway 57% -> 62% · receipts: #5 DONE 6f819a9 (engine-side after canon-warden rightly killed the on-device prose-scorer — the law held under pressure), 1223+1402 pushed, PR #2 live, #6 claimed 14:50 on 1449 per SPEC 0004 · bands hold: late Sept aggressive / mid-late Oct realistic · top risk unchanged: beta Sun, 0 recruits",
+  "- 2026-08-07 15:06 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-07 15:21 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -72,7 +72,7 @@
   {
    "n": 6,
    "task": "Screenshot pipeline, seeded fixture data",
-   "status": "OPEN — SPEC READY (patches/0004, 13:56 UTC): seam=SentrApp(showSampleData:true), driver+10 frames specified w/ DoD"
+   "status": "IN PROGRESS — mac auto-builder, 2026-08-07 14:50 UTC, branch night/auto-20260807-1449 (from beta-2); prior session's draft driver+test under review against SPEC 0004"
   },
   {
    "n": 7,
@@ -102,7 +102,7 @@
   {
    "n": 12,
    "task": "Broken-source failure states per handoff \"When Sentr fails\" (source row red dashed ring + Today line, never blocks)",
-   "status": "OPEN"
+   "status": "OPEN — SPEC EXISTS, settled 15:00 UTC: design_handoff_sentr/README.md:485-506 verbatim (dashed rgba(169,48,40,.7) ring + exact copy + Today line + 3 failure rules); the earlier \"spec gap\" flag looked in the wrong place. Implement from that text."
   },
   {
    "n": 13,
