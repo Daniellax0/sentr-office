@@ -379,7 +379,7 @@ function render(){
   const done=DATA.board.filter(b=>b.status==="DONE").length;
   const prog=DATA.board.filter(b=>b.status==="IN PROGRESS").length;
   document.getElementById('totals').innerHTML=
-    `today: <b>${done}</b> board items done &middot; <b>${prog||"0"}</b> in progress &middot; <b>${entries.length}</b> log events &middot; runway <b>~54%</b> &middot; beta <b>10 Aug</b>`;
+    `today: <b>${done}</b> board items done &middot; <b>${prog||"0"}</b> in progress &middot; <b>${entries.length}</b> log events &middot; runway <b>${DATA.runway?('~'+DATA.runway+'%'):'—'}</b> &middot; beta <b>10 Aug</b>`;
   document.getElementById('donetext').textContent=done+" of "+DATA.board.length+" done";
   // board
   const T=document.getElementById('tasks');T.innerHTML='';
@@ -390,14 +390,29 @@ function render(){
   });
   // feed
   const feed=document.getElementById('feed');feed.innerHTML='';
-  DATA.log.slice().reverse().forEach(l=>{
+  // NOISE FILTER (8 Aug): bare wake/pushbot heartbeats are collapsed into one counted line so the
+  // feed shows WHAT CHANGED, not that the machine is breathing. Substance = anything else.
+  const NOISE=/(^|·|\.)\s*(mac auto-builder[^·]*\.\s*wake( finished)?\s*$|v[0-9.]+\s*\.\s*wake)/i;
+  const isNoise=s=>/\bwake( finished)?\s*$/i.test(s)||/pushbot .*(PUSHED|PR OPENED)/i.test(s);
+  const all=DATA.log.slice().reverse();
+  const beats=all.filter(l=>isNoise(l)).length;
+  const subst=all.filter(l=>!isNoise(l));
+  if(beats){const h=document.createElement('div');h.className='fitem';
+    h.innerHTML='<span class="fd">·</span><span style="opacity:.55">'+beats+' wake/push heartbeats hidden — showing what actually changed</span>';
+    feed.appendChild(h);}
+  if(!subst.length){const z=document.createElement('div');z.className='fitem';
+    z.innerHTML='<span class="fd">!</span><span style="color:#A93028"><b>Nothing but heartbeats in this window.</b> The builder is running and producing no work.</span>';
+    feed.appendChild(z);}
+  subst.forEach(l=>{
     const e=parseLogLine(l);
     const d=document.createElement('div');d.className='fitem';
+    const hot=/DONE|FIXED|PUBLISHED|GREEN|NO COMMIT|BLOCKED|RED |VERDICT|ENGINE:|CONNECT:/i.test(e.text);
+    if(hot)d.style.borderLeft='3px solid #C9A227',d.style.paddingLeft='7px';
     d.innerHTML=`<span class="fd">${e.t?e.t.toLocaleTimeString('en-GB',{timeZone:CPH,hour:'2-digit',minute:'2-digit'}):""}</span><span>${e.text.replace(/</g,'&lt;').replace(/^\d{4}-\d{2}-\d{2}[ ·.]*\d{2}:\d{2}( UTC)?[ ·.]*/,"")}</span>`;
     feed.appendChild(d);
   });
   document.getElementById('srctext').textContent="data: "+DATA.source;
-  document.getElementById('genstamp').textContent="baked "+SNAPSHOT.generatedAt.slice(11,16)+" UTC · refreshed hourly";
+  document.getElementById('genstamp').innerHTML=(function(){var g=DATA.stamp?new Date(DATA.stamp):null;if(!g)return '<b style="color:#A93028">NO LIVE DATA</b>';var m=Math.round((Date.now()-g.getTime())/60000);var s=m<=20?'':' style="color:#A93028"';return '<b'+s+'>updated '+(m<1?'just now':m+' min ago')+'</b> · '+g.toISOString().slice(11,16)+' UTC'+(m>20?' · BUILDER MAY BE STALLED':'');})();
 }
 
 /* ============ LIVE SOURCES ============ */
@@ -451,9 +466,9 @@ window.gateTry=function(){if(document.getElementById('gatecode').value==='sentr1
 if(sessionStorage.getItem('sok')==='1')document.getElementById('gate').style.display='none';
 document.getElementById('gatecode').addEventListener('keydown',e=>{if(e.key==='Enter')gateTry();});
 async function pullData(){try{const r=await fetch('./data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)return;const d=await r.json();
-if(d.log&&d.log.length)DATA.log=d.log;if(d.board&&d.board.length)DATA.board=d.board;
+if(d.log&&d.log.length)DATA.log=d.log;if(d.board&&d.board.length)DATA.board=d.board;DATA.stamp=d.generatedAt||null;if(typeof d.runway==='number')DATA.runway=d.runway;
 DATA.source='LIVE \u00b7 '+((d.generatedAt||'').slice(11,16))+' UTC \u00b7 refreshed each builder wake';render();}catch(_){}}
-pullData();setInterval(pullData,60000);
+pullData();setInterval(pullData,20000);
 })();
 </script>
 </body>
