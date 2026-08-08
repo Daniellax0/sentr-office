@@ -1,11 +1,7 @@
 {
- "generatedAt": "2026-08-08T19:30:08Z",
+ "generatedAt": "2026-08-08T19:37:24Z",
  "runway": 80,
  "log": [
-  "- 2026-08-08 17:46 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-08 17:48 UTC . pushbot . PUSHED night/auto-20260808-1746 -> origin (150 commits ahead of beta-2)",
-  "- 2026-08-08 17:48 UTC . pushbot . PR OPENED for night/auto-20260808-1746 (base release/sentr-1.0)",
-  "- 2026-08-08 17:48 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-08 17:48 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-08 17:55 UTC . pushbot . PUSHED night/auto-20260808-1748 -> origin (152 commits ahead of beta-2)",
   "- 2026-08-08 17:55 UTC . pushbot . PR OPENED for night/auto-20260808-1748 (base release/sentr-1.0)",
@@ -41,7 +37,11 @@
   "- 2026-08-08 19:29 UTC . pushbot . PR OPENED for night/auto-20260808-1904 (base release/sentr-1.0)",
   "- 2026-08-08 19:30 UTC . pushbot . PR OPENED for night/paint-20260808-1904 (base release/sentr-1.0)",
   "- 2026-08-08 19:30 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-08 19:30 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-08 19:30 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-08 19:36 UTC . pushbot . PUSHED night/auto-20260808-1930 -> origin (53 commits ahead of beta-2)",
+  "- 2026-08-08 19:37 UTC . pushbot . PR OPENED for night/auto-20260808-1930 (base release/sentr-1.0)",
+  "- 2026-08-08 19:37 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-08 19:37 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -623,6 +623,11 @@
    "n": 77,
    "task": "**THE TWO CONNECT DEFECTS, MEASURED ON A DEVICE — TOP CODE ITEM FOR THE NEXT WAKE. Both sit on the first surface a new person touches, and both are the \"not fully functioning / ALWAYS ON while connected to nothing\" family from THE_BORING_FIX alive in new places.** Found by wake 1840's connect lane while proving #24B; each has file:line and neither is re-diagnosis work — act on it. **(1) A FILE SHARED WHILE SENTR IS CLOSED NEVER OPENS.** `AppShell.initState` fires the drain from its first post-frame callback (`lib/screens/app_shell.dart:70-73`) but the drain returns unless `_productionOnboardingComplete == true` (`:206`) — a flag set by an ASYNC prefs read started in that same initState, so the drain loses the race on a cold start every time. Only a background/foreground round trip (`:289-292`) recovers it. **`lib/services/incoming_file_service.dart:20-22` documents the opposite behaviour**, so the code and its own contract disagree. Likely shape of the fix: await the prefs read before draining, or re-drain when the flag resolves. **(2) THE SOURCES ROW DENIES THE IMPORT IT JUST ATE.** After 711 turns landed through the share door, the archive row still read `neverAsked`, with no count and a LET ME READ IT affordance; it told the truth only after a relaunch. Cause: a share-sheet arrival is pushed by AppShell **above** GhostApp, and nothing tells `GhostApp._load` (`lib/screens/ghost/ghost_app.dart:513`) that a route it did not push landed an import — its OWN import door reloads correctly (`:961-966`), which is the asymmetry to close. **Both were proven on a booted iPhone 17 Pro, not argued from source; proof and run logs in deliverables/proof_hour/wake1840_connect_*.** **ALSO OWED, smaller: this build has NO HEALTHKIT ENTITLEMENT (`PlatformException(health_sync, Missing com.apple.developer.healthkit entitlement.)`), so the Health source cannot connect on ANY simulator — that is a signing/capability question and CLAUDE.md forbids agents touching iOS configuration, so it needs the founder or an explicit instruction.**",
    "status": "**OPEN — top code item.** Filed by the mac auto-builder wake 1840, 2026-08-08 19:29 UTC, branch `night/auto-20260808-1840`, PR #65."
+  },
+  {
+   "n": 77,
+   "task": "**THE OVERFLOW LANE B FIXED HAS A TWIN THAT IS STILL THERE, AND THE REASON NO TEST CAN SEE IT IS THE SAME REASON THE FIRST ONE SURVIVED.** Filed by wake 1904 from lane B's own report, **UNVERIFIED BY ME — read the lines before building on it (LESSONS 62/66).** `_ConfirmedBlock`'s outcome chips overflowed 302pt by 84px at accessibility scale and were fixed with `Wrap` this wake; `_MoveBlock`'s bottom Row (`Why this` / `Not this one`, `sentr_today_screen.dart:390` at 6a62fd6) **has the same fixed-Row shape and was left untouched to keep the diff minimal.** It is only built when `onWhyThis`/`onDecline` are non-null, **and no test anywhere passes either callback** — which is exactly the property that hid the first overflow: `paper_renders_test.dart` sweeps this screen at three sizes INCLUDING 2.0 text scale and still could not see the confirmed-block defect, because reaching it needed a TAP. A widget no fixture ever constructs cannot overflow in a test no matter how many sizes the test sweeps. **THE METHOD, and it is the transferable half:** the fix is not \"add a Wrap\" — it is to mount this block WITH both callbacks at largest text scale, watch it stripe red, then fix it, so the guard is a control and not an assertion of faith. **ALSO WORTH ONE GREP BEFORE FIXING JUST THIS ONE:** `grep -n 'Row(' lib/screens/ghost/sentr_today_screen.dart` and ask of each hit whether any fixture builds it — two instances of one shape in one file, one of them live, is a family and not a coincidence, and the cheap move is to close the family while the method is in hand.",
+   "status": "OPEN — small, and it closes a class rather than an instance"
   }
  ]
 }
