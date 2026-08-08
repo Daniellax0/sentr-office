@@ -1,9 +1,7 @@
 {
- "generatedAt": "2026-08-08T17:04:08Z",
+ "generatedAt": "2026-08-08T17:17:11Z",
  "runway": 80,
  "log": [
-  "- 2026-08-08 14:38 UTC . pushbot . PR OPENED for night/auto-20260808-1413 (base release/sentr-1.0)",
-  "- 2026-08-08 14:38 UTC . pushbot . PR OPENED for night/falsifier-20260808-1413 (base release/sentr-1.0)",
   "- 2026-08-08 14:38 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-08 14:38 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-08 15:01 UTC . pushbot . PR OPENED for night/ttffproof-20260808-1413 (base release/sentr-1.0)",
@@ -41,7 +39,9 @@
   "- 2026-08-08 16:51 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-08 16:51 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-08 17:04 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-08 17:04 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-08 17:04 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-08 17:17 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-08 17:17 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -478,6 +478,21 @@
    "n": 66,
    "task": "**A FULL SUITE VERDICT EXISTS AGAIN AND IT IS GREEN: `night/auto-20260808-1624` @ 5da699b — 21 shards, PASS=21 FAIL=0, 2995 tests, 10 skips, 14m36s (16:40:11-16:54:47 UTC), load 8.09.** Wake 1624, via `night_shift/autobuild/shard_suite.sh`, verdicts read off each shard's own reporter line and never an exit code (LESSONS 47/54); neither crash signature appears in any of the 21 logs; artefacts at `/tmp/shards1624/VERDICTS.txt`. `test_evaluation` 7m05s, `test_ghost_brain` 1442 tests in 5m02s — the monolith crash is gone, as LESSONS 54 predicted, because sharding removes it rather than containing it. **SCOPE, STATED SO NOBODY OVER-READS IT: this covers PR #50 only. The legibility lane `night/legibility-20260808-1624` @ 3ef5b13 (PR #51) has a targeted gate (39/39 + 17/17 + 6/6, analyze clean) and its OWN sharded run was launched at 17:02 UTC into `/tmp/shards1624b/VERDICTS.txt` — READ IT BEFORE MERGING #51, and if the runner died with the wake, the finished shards on disk are still trustworthy facts (LESSONS 58)**",
    "status": "DONE for #50 / IN FLIGHT for #51"
+  },
+  {
+   "n": 63,
+   "task": "**FIRST SITE SWEPT, AND THE MEASUREMENT CAME BACK NULL — WHICH REPRIORITISES THE REST OF THE ROW. Mac auto-builder wake 1651, 2026-08-08 17:05 UTC, branch `night/auto-20260808-1651` @ 2788f39, PR #52 base release/sentr-1.0.** `calendarEntries` (`test/ghost_brain/session_one_gates_test.dart:26`) built 60 entries with 60 `append` calls, each re-encoding the whole ledger (`event_ledger.dart:82-89`); now ONE `appendAll` (:136) - same events, same order, same ids, one encode. Test count **+16 before and +16 after**, so nothing was silently neutered (board #65). **NO SPEEDUP IS CLAIMED, BECAUSE NONE WAS MEASURED.** This row says \"measured, not guessed\", so it was measured: four runs, two each side, reporter elapsed - **AFTER 3s/3s, BEFORE 6s/3s. Those overlap.** At N=90 the quadratic is not what this file costs, and the reporter's second-resolution counter cannot resolve what it does. (Both sides were also timed while the sharded suite held the machine, so the noise floor was high - LESSONS 49 says time it alone, and this was not alone.) **THE CORRECTION THIS ROW NEEDS: the sweep was ranked on the wrong axis.** #63 ranked the remainder by CALL-SITE COUNT (\"20+ surviving call sites\"), but the cost is O(N^2) in the **LOOP BOUND**, not in how many places call `append`. Ranked by N, the real candidates are narrow and named: **session_one_gates (60/30, done), routing_regressions (60, at :203/:229/:283), ghost_sleep_benchmarks (40)** - and the rest of the 20+ are small-N and are not worth the churn. **NEXT LANE, do not repeat my mistake: measure with a finer instrument than the reporter line, or seed a large-N fixture on purpose, and do it on an otherwise idle Mac - otherwise you will land unmeasured churn and call it a speedup**",
+   "status": "OPEN — one site done and honest; the ranking is corrected and the remaining two are named with their N"
+  },
+  {
+   "n": 58,
+   "task": "**THE OWED ITEM IS CLOSED: THE LAW NAMED AS THE FALSIFIER FOR QUADRATIC IMPORTS HAD NEVER ONCE RUN — mac auto-builder wake 1651, 2026-08-08 17:12 UTC, branch `night/auto-20260808-1651` @ a94a681, PR #52 base release/sentr-1.0.** #58(b) filed it as small and it was, but the shape of it is worth keeping: `test/laws/large_import_test.dart` carried `skip: fixturePath == null`, and `LARGE_IMPORT_FIXTURE` is set by `tool/release_gate.sh:100` **and by nothing else** - so in every ordinary `flutter test`, including every sharded suite this office has run and reported green, the one law standing between us and a quadratic import pass printed a SKIP that nobody read. **A law that silently opts out is worse than no law: it occupies the space where a real check would go and reports green from it.** It now **generates its own ~1MB archive** when no fixture is handed in, so it runs on every suite. Measured on this Mac: **1.0MB, 4140 turns, read 3ms, parse 63ms, import 94ms** - under a second, so it is NOT a suite-time regression. The 200MB endurance path is untouched and still the gate's. **Written in DART, not by shelling to `tool/make_large_fixture.py`, on purpose: a law that needs python3 on the machine is a law that goes back to skipping the first time it is not there.** The generator mirrors the Python one's JSON shape exactly (top-level array, `mapping` of linked nodes, `content.parts`) because the parser is the thing under test and a differently-shaped fixture would test nothing; deterministic by construction, no unseeded `Random`, so a failure reproduces. **WHAT IT DOES NOT DO, said plainly rather than implied: 1MB cannot catch an endurance defect, and this fixture stores 0 proposition spans (424 observations), so the proposition path is STILL only exercised by the gate's 200MB run.** What it catches on every run is the parser silently giving up, the import throwing, and either budget being blown - three things that until today were checked by nothing. **STANDING SWEEP THIS OPENS, and it is cheap: `grep -rn \"skip:\" test/` and read every one. Any other law gated on an env var only one script sets has the same defect and the same green**",
+   "status": "OPEN — the large-import skip is CLOSED; the `skip:` sweep it implies is the next cheap win and nobody has run it"
+  },
+  {
+   "n": 58,
+   "task": "**THE `skip:` SWEEP IS RUN, NOT JUST FILED — and it CLOSES rather than opens, which is the good outcome. Wake 1651, 17:15 UTC, read-only.** I filed the sweep one row above as \"nobody has run it\" and then ran it, so that row is superseded here. `grep -rn \"skip:\" test/` returns **8 skips, and every one of them is legitimate**: `pending_laws_test.dart:165/171/177`, `styling_test.dart:212`, `traits_tab_shows_what_is_tracked_test.dart:85/106/126/152` - all carry `PENDING until <date>` and all point at the `pendingLaws` registry. **That registry is exactly the discipline I was about to propose, already built and already enforced:** `pending_laws_test.dart` opens \"a law we have agreed to and not yet built is a dated debt, not a good intention... after that date the skip itself fails the suite\", and it enforces it at `:129-133` (`DateTime.parse(law.expires).isBefore(now)` fails the suite) plus `:154` (every date must parse). Live expiries are 2026-08-17, 08-22, 08-23 - all future, so none is rotting. **THE FINDING: `large_import_test.dart` was the ONLY UNDATED, UNREGISTERED SKIP IN THE WHOLE TEST TREE** - the one law that had opted out with no expiry, no registry entry and no way for the suite to ever notice. That is why it went unread for months while eight others stayed honest. The fix is landed (a94a681) and the class is now empty. **The rule this leaves: a skip is legitimate ONLY if something dated will fail when it stops being true. `pendingLaws` is that something; anything skipping outside it is the defect**",
+   "status": "**DONE — sweep run, 8/8 skips legitimate and enforced by pendingLaws, large_import was the only offender and is fixed. This class is closed**"
   }
  ]
 }
