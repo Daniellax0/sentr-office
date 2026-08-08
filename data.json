@@ -1,13 +1,7 @@
 {
- "generatedAt": "2026-08-08T17:17:11Z",
+ "generatedAt": "2026-08-08T17:22:52Z",
  "runway": 80,
  "log": [
-  "- 2026-08-08 14:38 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-08 14:38 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-08 15:01 UTC . pushbot . PR OPENED for night/ttffproof-20260808-1413 (base release/sentr-1.0)",
-  "- 2026-08-08 15:01 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-08 15:01 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-08 15:07 UTC . pushbot . PUSHED night/auto-20260808-1501 -> origin (102 commits ahead of beta-2)",
   "- 2026-08-08 15:07 UTC . pushbot . PUSHED night/stress-20260808-1438 -> origin (96 commits ahead of beta-2)",
   "- 2026-08-08 15:07 UTC . pushbot . PR OPENED for night/auto-20260808-1501 (base release/sentr-1.0)",
   "- 2026-08-08 15:07 UTC . pushbot . PR OPENED for night/stress-20260808-1438 (base release/sentr-1.0)",
@@ -41,7 +35,13 @@
   "- 2026-08-08 17:04 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-08 17:04 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-08 17:17 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-08 17:17 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-08 17:17 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-08 17:22 UTC . pushbot . PUSHED night/auto-20260808-1717 -> origin (137 commits ahead of beta-2)",
+  "- 2026-08-08 17:22 UTC . pushbot . PUSHED night/voice-20260808-1717 -> origin (137 commits ahead of beta-2)",
+  "- 2026-08-08 17:22 UTC . pushbot . PR OPENED for night/auto-20260808-1717 (base release/sentr-1.0)",
+  "- 2026-08-08 17:22 UTC . pushbot . PR OPENED for night/voice-20260808-1717 (base release/sentr-1.0)",
+  "- 2026-08-08 17:22 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-08 17:22 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -493,6 +493,21 @@
    "n": 58,
    "task": "**THE `skip:` SWEEP IS RUN, NOT JUST FILED — and it CLOSES rather than opens, which is the good outcome. Wake 1651, 17:15 UTC, read-only.** I filed the sweep one row above as \"nobody has run it\" and then ran it, so that row is superseded here. `grep -rn \"skip:\" test/` returns **8 skips, and every one of them is legitimate**: `pending_laws_test.dart:165/171/177`, `styling_test.dart:212`, `traits_tab_shows_what_is_tracked_test.dart:85/106/126/152` - all carry `PENDING until <date>` and all point at the `pendingLaws` registry. **That registry is exactly the discipline I was about to propose, already built and already enforced:** `pending_laws_test.dart` opens \"a law we have agreed to and not yet built is a dated debt, not a good intention... after that date the skip itself fails the suite\", and it enforces it at `:129-133` (`DateTime.parse(law.expires).isBefore(now)` fails the suite) plus `:154` (every date must parse). Live expiries are 2026-08-17, 08-22, 08-23 - all future, so none is rotting. **THE FINDING: `large_import_test.dart` was the ONLY UNDATED, UNREGISTERED SKIP IN THE WHOLE TEST TREE** - the one law that had opted out with no expiry, no registry entry and no way for the suite to ever notice. That is why it went unread for months while eight others stayed honest. The fix is landed (a94a681) and the class is now empty. **The rule this leaves: a skip is legitimate ONLY if something dated will fail when it stops being true. `pendingLaws` is that something; anything skipping outside it is the defect**",
    "status": "**DONE — sweep run, 8/8 skips legitimate and enforced by pendingLaws, large_import was the only offender and is fixed. This class is closed**"
+  },
+  {
+   "n": 65,
+   "task": "**(A) IS DONE AND THE WARDEN'S PRESCRIPTION WAS HALF THE FIX. Mac auto-builder wake 1704, 2026-08-08 17:55 UTC, branch `night/auto-20260808-1704` @ 3149ece, PR #53 base release/sentr-1.0, worktree /private/tmp/hedge1704** (cut from `night/legibility-20260808-1624`, the freshest lane at missing=11, with `night/auto-20260808-1651` merged clean after its subject line was read; trunk IS an ancestor, beta-2 is NOT). **THE DEFECT WAS REPRODUCED BY A RUNNING TEST, NOT ARGUED:** with the pre-fix condition in place the new falsifier prints `You have raised \"therapy\" 9 times over 160 days. Across 1 scheduled things - calendar entries and dated tasks - none of them was about it.` **THE PRESCRIPTION FLOORED THE WRONG NOUN, OR RATHER ONLY ONE OF TWO.** The sentence names two sets: `legibility.total` (what was READ - everything handed to `find()`) and `itemsSearched` (what was SEARCHED - only shape-schedules items, always smaller, and the noun the sentence prints). Flooring only `total` leaves the defect fully live at total=10, itemsSearched=1. The floor is the UNION. The hedge clause also published a raw `fraction*100` with no floor - the THIRD publication of this rate, the one d04b301's sweep did not reach - and now states two counts with its singular. Band UNTOUCHED (d547a9a is a founder ruling). GATE: analyze clean on both changed files; all SIX files that import the engine green (+48, +34, +1) - the sweep was `grep -rln` for the importer, not this row's file list (LESSONS 74). Full suite NOT run and NOT claimed",
+   "status": "**(A) DONE** — (C)(D) still open and small"
+  },
+  {
+   "n": 67,
+   "task": "**#65(B) IS RANKED AND THE ROW HAD IT UPSIDE DOWN — the sentence the board named is LATENT and the real violation is ELEVEN LIVE SENTENCES, SEVEN OF THEM ON THE ASK SCREEN.** canon-warden read-only lane, wake 1704, dispatched against /private/tmp/rates1624b with one graded question and a liveness requirement (trace each getter up to a widget the seam mounts). **THE BOARD'S EXAMPLE (`calendar_legibility.dart:79-90`, \"Sentr can read...\") IS LATENT:** `LegibilityReading.sentence` has exactly ONE caller in lib/ (`install_qualification.dart:102`) and neither it nor `InstallQualification` is referenced anywhere else — its only consumer is a test. **THE LIVE ELEVEN, in order:** (1)-(6) `question_box.dart:188,156,247,221,190,194` — all six render on `SentrAskScreen` (route `ghost_app.dart:1571 onAsk` -> `:993`), and `sentr_ask_screen.dart:290` paints the label **`WHAT I HOLD` directly above the third-person body** \"Sentr is not going to count anything about you this week\"; (7) `ghost_app.dart:618-620` (docket standing, `SentrDocketBlock`); (8)(9) `case_closure.dart:126,152` (docket + `GhostCaseScreen`, and the FALLBACK BESIDE IT AT `ghost_app.dart:1038` IS ALREADY FIRST PERSON); (10)(11) `memory_import_screen.dart:295,388` (live via `onOpenSources` -> `_openPaperSources` -> archive row -> `_importMemory`). Replacement sentences are written for each. **BEFORE TOUCHING IT:** four tests PIN the current third-person wording and must move in the same commit — `session_one_gates_test.dart:348`, `investigations_test.dart:126`, `never_empty_test.dart:118`, `all_screens_smoke_test.dart:195`. Correctly third-person and NOT to be changed (amendment 2 keeps the product/company/store voice): membership/billing, StoreKit failures, `app_shell.dart:264`, and the \"Settings, then Sentr, then ...\" iOS instructions. **SEPARATE DEFECT FOUND IN PASSING: `record_census.dart:96` asserts a liveness it does not have** (\"read on the evidence surface at ghost_app.dart:547\") — `GhostCensusCard` is rendered only by `GhostTodayTab`, which the seam does not mount; the stale comment is how the next reader mis-ranks this row again",
+   "status": "OPEN — the eleven are written with routes, replacements and the four pinning tests named; ~40 min"
+  },
+  {
+   "n": 68,
+   "task": "**FOUNDER RULING OWED: what is the smallest SEARCH an argument from absence may be stated flat over?** Raised by canon-warden against wake 1704's own fix, `night/auto-20260808-1704` @ c44811a, PR #53. `AskedNeverScheduledClaim` now hedges \"none of them was about it\" below `AskedNeverScheduledEngine.minSearchedToSpeakPlainly = 5` scheduling-shaped items. **THE NUMBER IS CHOSEN, NOT FORCED, AND THE CODE SAYS SO IN ITS OWN DOC.** It deliberately does not reuse `CalendarLegibility.minEntriesForPercent`, whose mechanism is a RATE's resolution (\"under five entries a percentage takes at most a handful of values\") — after the rewrite neither branch of this sentence publishes a rate, so the mechanism is absent and the authority does not transfer (LESSONS 76); and that constant's own doc reserves \"five defended as a threshold rather than as above one\" to the founder. Nothing degenerates at four. **The floor never silences the claim** — d547a9a already set silence at zero (\"ONE row searched is a search, and the engine speaks again\") — it only decides how flatly the absence may be put. **THE SWEEP THAT WOULD SETTLE IT, and it has NOT been run:** render this sentence over real records at every search size and find the size at which a reader stops treating the flat form as overclaiming. Until then 5 stands as a declared speech floor, not a derived one",
+   "status": "OPEN — founder ruling; the code ships hedged in the meantime, which is the safe direction"
   }
  ]
 }
