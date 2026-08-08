@@ -1,9 +1,7 @@
 {
- "generatedAt": "2026-08-08T17:37:09Z",
+ "generatedAt": "2026-08-08T17:37:19Z",
  "runway": 80,
  "log": [
-  "- 2026-08-08 15:07 UTC . pushbot . PR OPENED for night/stress-20260808-1438 (base release/sentr-1.0)",
-  "- 2026-08-08 15:07 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-08 15:07 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-08 15:23 UTC | wake 1508 | board #56 CLOSED, #58 OPENED, MONDAY CRITERION 4 CLOSED | branch night/auto-20260808-1508 @ 66d49aa, PR #43 base release/sentr-1.0 | ENGINE: **RAN** - the gap sentence was printed by the app's OWN PROCESS on a booted simulator (iPhone 17 Pro Max, `All tests passed!` +1, 320s incl. 183s Xcode build) and the bytes are proven, not transcribed: `SENTENCE-ON-SCREEN: You put \"Gym - Fitness World\" in your calendar 13 times in the 90 days before 10 May. In the 90 days since: twice.` with hexdump `e2 80 94` at 0x21 = a real U+2014 EM DASH and ZERO ASCII hyphens after the label - which is the exact discriminator against LOG.md:256's hand transcription. sha256 e0de48ca47fc186e. 3 frames in night_shift/deliverables/proof_monday/, taken inside the test's own re-asserting screenshot window. Fixture calendar, said so. · CONNECT: unchanged this wake | #56 CLOSED (c1f34b6): propositions.dart was byte-identical to f2636dc^ for the THIRD time; re-ported as a PATCH (+63/-18 = the source commit's own stat, nothing smuggled). **AND THE REASON IT KEPT GOING HOLLOW: its named falsifier `test/laws/large_import_test.dart` SKIPS unless LARGE_IMPORT_FIXTURE is set (:89), which only tool/release_gate.sh sets - the law has never run in an ordinary suite.** Ran it for real at 12MB: PASS, 48,059 turns, import 1118ms. 200MB shape ratio NOT run (loaded Mac), said plainly. | RED MAP PUBLISHED and it is 3, not 4: reachability went green because the integration carried dc1c633. Greeting reds (2)+(3) FIXED (6c2a30e) - ONE retired copy rule at two call sites, verdict read out of 686a9f6's own body, +8 green. Red (1) stability_smoke walks the 7-page GettingStartedScreen the app no longer opens on clean install (AppShell renders SentrOnboardingScreen, app_shell.dart:358) - DIAGNOSED, not fixed, and reverted rather than committed half-done. | #55(B2)+(B3) verified ALREADY CLOSED in source, not assumed - the board was stale. | analyze 16 = the warden's confirmed baseline, zero added. Full suite NOT run (load 20-51, six flutter_testers - LESSONS 46 forbids claiming a count off a contended machine). | days-closer: 0.6",
   "- 2026-08-08 15:34 UTC | wake 1508 (addendum) | board #60 OPENED — THE SUITE BLOCKER IS MEASURED | read-only, no branch change | `test/evaluation/first_sixty_seconds_test.dart` held wake 1438 live suite for 13+ minutes at 104% CPU on a machine whose load had FALLEN to 5.2, after that run reached +2979 ~10 -6. Not a deadlock (0.0% and stays there is a deadlock); not starvation (nothing left to compete with). Corroborated by /tmp/full_suite.log from 2026-08-07, which named the same file `(did not complete)` a day before anyone blamed beta_stress_50 or store_size_measurement. I ALSO GOT IT WRONG FIRST: the parent dartvm reads 0.0% while its child does the work, and I said deadlock out loud before the log mtime (one second old) corrected me — sample the CHILD and cross-check the log is still growing. pid 36378 LEFT ALIVE deliberately: it is the furthest any full run has reached and it is the count Monday criterion 5 needs. | days-closer: 0.2",
@@ -40,6 +38,8 @@
   "- 2026-08-08 17:22 UTC . pushbot . PR OPENED for night/voice-20260808-1717 (base release/sentr-1.0)",
   "- 2026-08-08 17:22 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-08 17:22 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-08 17:37 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-08 17:37 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-08 17:37 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-08 17:37 UTC . mac auto-builder v3.0 . wake"
  ],
