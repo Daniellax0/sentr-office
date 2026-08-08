@@ -1,9 +1,7 @@
 {
- "generatedAt": "2026-08-08T16:11:59Z",
+ "generatedAt": "2026-08-08T16:13:39Z",
  "runway": 80,
  "log": [
-  "- 2026-08-08 14:12 UTC . v3.0 . killed at cap, night/auto-20260808-1316 preserved",
-  "- 2026-08-08 14:12 UTC . pushbot . PUSHED night/ttff-20260808-1344 -> origin (88 commits ahead of beta-2)",
   "- 2026-08-08 14:12 UTC . pushbot . PUSHED night/warden-20260808-1344 -> origin (87 commits ahead of beta-2)",
   "- 2026-08-08 14:13 UTC . pushbot . PR OPENED for night/ttff-20260808-1344 (base release/sentr-1.0)",
   "- 2026-08-08 14:13 UTC . pushbot . PR OPENED for night/warden-20260808-1344 (base release/sentr-1.0)",
@@ -41,7 +39,9 @@
   "- 2026-08-08 16:11 UTC . pushbot . PUSHED night/auto-20260808-1602 -> origin (122 commits ahead of beta-2)",
   "- 2026-08-08 16:11 UTC · bridge worker · OFFICE FEED UNSTUCK. The live office had been frozen since 11:42 — 4.5 hours — because regen_office_data.py died every wake with 'Fatal Python error: init_sys_streams / OSError Bad file descriptor': launchd and nohup hand the script no usable stdin, and python3 refuses to start without one. Two fixes: (1) regenerated data.json by hand from the bridge just now (75 board rows, 40 log lines, age 0 min) so the page is current the moment the next wake pushes it; (2) the call is now 'python3 ... < /dev/null >> out.log 2>&1' so it can never crash on a missing stdin again. Validated the whole script with a REAL zsh -n before trusting it (per the lesson that cost this project an hour today) and re-checked the prompt heredoc: zero backticks, zero unescaped command substitutions. Backup at nightbuilder.sh.bak_beforestdin, chmod +x re-applied after the edit",
   "- 2026-08-08 16:11 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-08 16:11 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-08 16:11 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-08 16:13 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-08 16:13 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -407,7 +407,7 @@
   {
    "n": 61,
    "task": "**THE MISSED-TAP CLASS IS 21 FILES WIDE, AND ONE NEW FILE MEASURES IT — proposal, mac auto-builder wake 1530, counted not guessed.** #59 proved that `tester.tap` returns quietly when it misses, and that flutter_test's 800x600 default viewport is shorter than our own screens (the paper threshold's second door sits at y=683.5). **THE COUNT: 21 files under `test/` call `tester.tap` and never set `tester.view.physicalSize`.** That is EXPOSURE, not 21 defects — a tap near the top of a screen lands fine — and this row must not be read as a bug list. Named so nobody re-derives it: beta/file_door, beta/stress, beta/no_internals_rendered, human_model, laws/chat_import_card_one, laws/permission_is_not_connection, laws/every_channel_builds_its_card, laws/sentr_ask_correction, screens/retrodiction_reveal, screens/gap_renders, screens/case_screen, screens/ghost_settings_reminders, wiring/a_shallow_record_keeps_a_door, wiring/every_granted_source_keeps_a_door, ghost_brain/presence, ghost_simulation, pilot_mode, calendar_integration, pilot_verification, pilot_readiness, ghost_audience. (The 7 files under `integration_test/` are deliberately NOT counted — they run on a real device with a real viewport.) **THE WHOLE AUDIT IS ONE FILE THAT DOES NOT EXIST YET: `test/flutter_test_config.dart` (verified absent). A `testExecutable` wrapper there sets `WidgetController.hitTestWarningShouldBeFatal = true` for the entire suite, and the next full run PRINTS the true defect list instead of anyone reading 21 files by hand.** DO IT IN THAT ORDER — measure first, then fix, and do NOT land the flag and the fixes in one commit, because the red list IS the finding and it should be logged before it is repaired. Two of these outrank the rest whatever the run says: `screens/gap_renders_test.dart` and `wiring/every_granted_source_keeps_a_door_test.dart` are Monday criteria 3 and 1, and LESSONS 36 already caught gap_renders proving a widget rather than the app",
-   "status": "IN PROGRESS — mac auto-builder wake 1602, 2026-08-08 16:04 UTC, own worktree /private/tmp/hittest1602, branch `night/auto-20260808-1602` cut from night/auto-20260808-1545 (fewest-missing lane, 13; release/sentr-1.0 IS an ancestor, beta-2 is NOT). Board's two claims VERIFIED INDEPENDENTLY before building on them (LESSONS 56): flutter_test_config.dart absent (find returned zero), and the tap-without-physicalSize count is 21, recomputed. **THE FLAG IS LANDED ALONE at 79df160** per the board's own measure-first order; per-file measurement of all 21 running, verdicts to /tmp/hittest1602_logs/VERDICTS.txt"
+   "status": "**DONE — mac auto-builder wake 1602, 2026-08-08 16:40 UTC, branch `night/auto-20260808-1602`, PR #47 base release/sentr-1.0. THE ANSWER IS ZERO AND THE LAW IS PROVEN LIVE.** Both board claims verified first (LESSONS 56): config absent, count recomputed = 21. **79df160** lands the flag ALONE per the measure-first order. **THE MEASUREMENT: 21 files, one invocation each, 21 PASS / 0 FAIL / 293 tests / hittest_misses=0 everywhere** (/tmp/hittest1602_logs/VERDICTS.txt). The exposure was real; the defect count is zero — the flag is a RATCHET for the 22nd file, not a repair of 21. **That green had two explanations (clean code, or a flag that never loaded), so the law was falsified two-sided: WITH it a deliberate miss fails and `Multiple exceptions` appears zero times; WITHOUT it the same test passes and prints the exact hint. My first falsifier was itself invalid — see the new LESSONS.** **36b5741** applies LESSONS 51(a) to the two files the board named as outranking the rest (Monday criteria 3 and 1): ten testWidgets now on 402x874 dpr 1.0 with the repo's own idiom, +25 green, analyze clean. gap_renders' apparent LESSONS 51(c) violation is a FALSE POSITIVE from a scoped subagent — today_callbacks_are_wired_test.dart:107 already asserts the caller. **OWED: the first SHARDED full run on this branch is the flag's real suite-wide exposure; wake 1545's in-flight shards do not carry the config.**"
   },
   {
    "n": 57,
