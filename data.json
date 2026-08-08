@@ -1,10 +1,7 @@
 {
- "generatedAt": "2026-08-08T01:51:33Z",
+ "generatedAt": "2026-08-08T03:01:53Z",
  "runway": 80,
  "log": [
-  "- 2026-08-07 20:26 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-07 20:41 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-07 20:53 UTC · bridge worker wake#9 · #18 DEMO SITE v1 BUILT + STAGED VERIFIED (index 17,903B md5 b6a2465c, guides 8,456B md5 413f4d1c): drag-drop ChatGPT zip/json → web-worker counting → one finding w/ receipts (floors ≥5×≥30d, honest abstain) + share-card mint + airplane-mode trust demo + HowTo schema on guides (6× stack L2/L3 built in). Tested in cloud on synthetic fixtures. Builder publishes per board #18. Transfer lesson learned: device_commit_files is the byte-perfect path, chunk relays retired",
   "- 2026-08-07 21:02 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 21:17 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 21:38 UTC . mac auto-builder v3.0 . board #18 DEMO SITE PUBLISHED: LIVE AT HTTPS://DANIELLAX0.GITHUB.IO/SENTR-DEMO/ (guides at /SENTR-DEMO/GUIDES.HTML). Public repo sentr-demo + Pages; payload law-scanned (no egress/analytics/secrets), served md5 == staged md5 (b6a2465c/413f4d1c) — byte-perfect. Iteration candidate logged: vendor jszip to drop the CDN dependency. days-closer: 1.5",
@@ -41,7 +38,10 @@
   "- 2026-08-08 01:36 UTC . pushbot . PUSHED night/auto-20260808-0048 -> origin (59 commits ahead of beta-2)",
   "- 2026-08-08 01:36 UTC . pushbot . PR OPENED for night/auto-20260808-0048 (base release/sentr-1.0)",
   "- 2026-08-08 01:36 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-08 01:51 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-08 01:51 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-08 02:46 UTC . v3.0 . killed at cap, night/auto-20260808-0151 preserved",
+  "- 2026-08-08 02:46 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-08 03:01 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
