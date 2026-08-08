@@ -43,7 +43,7 @@
   .agent.flip.moving svg{animation:bobf .5s infinite alternate}
   @keyframes bobf{from{transform:scaleX(-1) translateY(0)}to{transform:scaleX(-1) translateY(-3px)}}
   .aname{font-family:var(--mono);font-size:8px;letter-spacing:.5px;color:var(--ink2);margin-top:1px}
-  .say{position:absolute;bottom:52px;left:50%;transform:translateX(-50%);white-space:nowrap;max-width:min(230px,60vw);overflow:hidden;text-overflow:ellipsis;
+  .say{position:absolute;bottom:52px;left:50%;transform:translateX(-50%);white-space:nowrap;
     font-family:var(--mono);font-size:8.5px;color:var(--ink);background:var(--card2);
     border:1px solid var(--hair);border-radius:9px;padding:3px 7px;opacity:0;transition:opacity .4s;z-index:4}
   .agent.talking .say{opacity:1}
@@ -97,6 +97,8 @@
 </style>
 </head>
 <body>
+<div id="gate"><div class="glab">Sentr &middot; the office</div><input id="gatecode" type="password" placeholder="passcode" autocomplete="off"><button onclick="gateTry()">Enter</button></div>
+
 <div class="wrap">
 
 <header>
@@ -302,7 +304,7 @@ function moveTo(id,x,y){
 function say(id,txt){
   const s=document.getElementById('say-'+id);
   if(!txt){nodes[id].classList.remove('talking');return;}
-  s.textContent=String(txt).replace(/<[^>]+>/g,'').replace(/[*`_#]+/g,'').replace(/\s+/g,' ').trim().slice(0,44); nodes[id].classList.add('talking');
+  s.innerHTML=txt; nodes[id].classList.add('talking');
 }
 
 /* shift windows */
@@ -383,19 +385,7 @@ function render(){
   document.getElementById('donetext').textContent=done+" of "+DATA.board.length+" done";
   // board
   const T=document.getElementById('tasks');T.innerHTML='';
-  // phone-first: 170 rows is a wall. Show what is moving; everything else behind a tap.
-  const _all=DATA.board.slice();
-  const _live=_all.filter(b=>{const s=SNORM(b.status);return s==='IN PROGRESS'||s==='BLOCKED'});
-  const _rest=_all.filter(b=>!_live.includes(b));
-  const _show=window.__showAll ? _all : _live.concat(_rest.slice(0,12));
-  if(!window.__showAll && _all.length>_show.length){
-    const more=document.createElement('div'); more.className='trow';
-    more.style.cssText='cursor:pointer;justify-content:center;font-weight:700';
-    more.textContent='show all '+_all.length+' items';
-    more.onclick=()=>{window.__showAll=true;render()};
-    T.appendChild(more);
-  }
-  _show.forEach(b=>{
+  DATA.board.forEach(b=>{
     const cls=SNORM(b.status)==="DONE"?"done":SNORM(b.status)==="IN PROGRESS"?"prog":"open";
     const r=document.createElement('div');r.className='trow';
     r.innerHTML=`<span class="st ${cls}">${SNORM(b.status)}</span><span title="${String(b.status||'').replace(/"/g,'&quot;')}"><b>#${b.n}</b> ${String(b.task).slice(0,120)}${SDETAIL(b.status)?' <i style="opacity:.6">· '+SDETAIL(b.status).slice(0,90)+'</i>':''}</span>`;T.appendChild(r);
@@ -474,6 +464,9 @@ tickClock();setInterval(tickClock,1000);
 render();
 tickFloor();setInterval(tickFloor,6000);
 
+window.gateTry=function(){if(document.getElementById('gatecode').value==='sentr1023'){sessionStorage.setItem('sok','1');document.getElementById('gate').style.display='none';}};
+if(sessionStorage.getItem('sok')==='1')document.getElementById('gate').style.display='none';
+document.getElementById('gatecode').addEventListener('keydown',e=>{if(e.key==='Enter')gateTry();});
 async function pullData(){try{const r=await fetch('./data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)return;const d=await r.json();
 if(d.log&&d.log.length)DATA.log=d.log;if(d.board&&d.board.length)DATA.board=d.board;DATA.stamp=d.generatedAt||null;if(typeof d.runway==='number')DATA.runway=d.runway;
 DATA.source='LIVE \u00b7 '+((d.generatedAt||'').slice(11,16))+' UTC \u00b7 refreshed each builder wake';render();}catch(_){}}
