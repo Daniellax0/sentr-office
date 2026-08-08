@@ -218,6 +218,8 @@ const SNAPSHOT = {
   ]
 };
 
+const SNORM=s=>{const m=String(s||'').match(/^\s*\**\s*(DONE|IN PROGRESS|OPEN|BLOCKED|DRAFT READY|CLAIM STALE|FINAL GATE|SPEC READY|GREEN|RED)/i);return m?m[1].toUpperCase():'OPEN'};
+const SDETAIL=s=>String(s||'').replace(/^\s*\**\s*(DONE|IN PROGRESS|OPEN|BLOCKED|DRAFT READY|CLAIM STALE|FINAL GATE|SPEC READY|GREEN|RED)[^A-Za-z0-9]*/i,'');
 /* ============ STATE ============ */
 const CPH='Europe/Copenhagen';
 let DATA = { log: SNAPSHOT.log.slice(), board: SNAPSHOT.board.slice(), source:"snapshot · "+SNAPSHOT.generatedAt.slice(11,16)+" UTC" };
@@ -321,7 +323,7 @@ function tickFloor(){
   const now=new Date();
   const cur=activeWindows(now);
   const pill=document.getElementById('shiftpill'), st=document.getElementById('shifttext');
-  const inprog=DATA.board.filter(b=>b.status==="IN PROGRESS");
+  const inprog=DATA.board.filter(b=>SNORM(b.status)==="IN PROGRESS");
   const topOpen=DATA.board.find(b=>b.status==="OPEN");
   if(cur){pill.classList.add('live');st.textContent=(cur.kind==="builder"?"MAC BUILDER":cur.kind==="cloud"?"CLOUD WORKER":"NIGHT SHIFT")+" ON SHIFT";}
   else{pill.classList.remove('live');st.textContent="between shifts";}
@@ -376,17 +378,17 @@ function render(){
     const d=document.createElement('div');d.className='fchip';d.innerHTML=`${f} <b>${c}</b>`;F.appendChild(d);
   });
   // totals
-  const done=DATA.board.filter(b=>b.status==="DONE").length;
-  const prog=DATA.board.filter(b=>b.status==="IN PROGRESS").length;
+  const done=DATA.board.filter(b=>SNORM(b.status)==="DONE").length;
+  const prog=DATA.board.filter(b=>SNORM(b.status)==="IN PROGRESS").length;
   document.getElementById('totals').innerHTML=
     `today: <b>${done}</b> board items done &middot; <b>${prog||"0"}</b> in progress &middot; <b>${entries.length}</b> log events &middot; runway <b>${DATA.runway?('~'+DATA.runway+'%'):'—'}</b> &middot; beta <b>10 Aug</b>`;
   document.getElementById('donetext').textContent=done+" of "+DATA.board.length+" done";
   // board
   const T=document.getElementById('tasks');T.innerHTML='';
   DATA.board.forEach(b=>{
-    const cls=b.status==="DONE"?"done":b.status==="IN PROGRESS"?"prog":"open";
+    const cls=SNORM(b.status)==="DONE"?"done":SNORM(b.status)==="IN PROGRESS"?"prog":"open";
     const r=document.createElement('div');r.className='trow';
-    r.innerHTML=`<span class="st ${cls}">${b.status}</span><span><b>#${b.n}</b> ${b.task}</span>`;T.appendChild(r);
+    r.innerHTML=`<span class="st ${cls}">${SNORM(b.status)}</span><span title="${String(b.status||'').replace(/"/g,'&quot;')}"><b>#${b.n}</b> ${String(b.task).slice(0,120)}${SDETAIL(b.status)?' <i style="opacity:.6">· '+SDETAIL(b.status).slice(0,90)+'</i>':''}</span>`;T.appendChild(r);
   });
   // feed
   const feed=document.getElementById('feed');feed.innerHTML='';
