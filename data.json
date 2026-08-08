@@ -1,11 +1,7 @@
 {
- "generatedAt": "2026-08-08T00:48:42Z",
+ "generatedAt": "2026-08-08T01:51:33Z",
  "runway": 80,
  "log": [
-  "- 2026-08-07 19:56 UTC . mac auto-builder v3.0 . wake",
-  "- 2026-08-07 19:57 UTC · bridge worker · founder raised the bar: 7bn people, 1,000 payers must be doable or the machine is wrong → board #19 PATHS ×10 opened: 20+ export-guide SEO pages, First Reading press kit, PH/HN/reddit launch kits (founder-hand only, no astroturf), ASO variants — every honest path, all draft-ready, demo share-loop as multiplier. The standard accepted: not finding 1,000 of 8,000,000,000 is a machine defect, not a market defect",
-  "- 2026-08-07 20:19 UTC · finance desk · RECOMPUTE №3 (new direction + full marketing throttle) · M6 payer bands: old realistic ~45 → NEW realistic 150–300 (guides×20 compounding + demo→install ≥10% + share loop + PH/HN/press kits), strong 500–900, 1,000-by-M6 requires one viral hit (HN front page / press pickup, honest odds 10–15%) — 1,000 organic center lands M9–12; 2,500 = M12–18 organic or flipped ad math · ADS PRICED HONESTLY: 1,000 payers needs 29–33k installs; buying them at CPI –4 = 8–132k spend against LTV 0–65/payer → every ad-bought payer LOSES 7–68 today; ads flip positive when D30 ≥15% or ARPU rises (annual-seal attach is the lever) → desk rule: organic at 110%, paid = metered probe ≤1,000 DKK with weekly CAC/LTV check + kill switch, full ad throttle the day the math flips · launch bands unchanged (12–20 Sept aggr / 22 Sept–10 Oct realistic / Dec–Jan worst via kill criterion) — marketing moves the curve after launch, not the date · raise proofs: installs side de-risked by paths; D30 ≥10% remains product-truth, decided by beta card one",
-  "- 2026-08-07 20:24 UTC · bridge worker · FOUNDER ORDER mid-wake: close 250→1,500. Panel brainstorm ran; verdict on board #20: the 6× STACK (languages ×2–3 · answer-engine citation ×1.5–2 · First-Reading-as-artifact share loop ×1.3–1.8 · Apple featuring nomination binary · demo+guides base). No silver bullet exists; the stack is the honest 6×. Implementation begins THIS wake: demo v1 ships L3 built-in, builder folds L1+L2 into every published page, L4 packet queued",
   "- 2026-08-07 20:26 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-07 20:41 UTC . mac auto-builder v3.0 . wake",
   "- 2026-08-07 20:53 UTC · bridge worker wake#9 · #18 DEMO SITE v1 BUILT + STAGED VERIFIED (index 17,903B md5 b6a2465c, guides 8,456B md5 413f4d1c): drag-drop ChatGPT zip/json → web-worker counting → one finding w/ receipts (floors ≥5×≥30d, honest abstain) + share-card mint + airplane-mode trust demo + HowTo schema on guides (6× stack L2/L3 built in). Tested in cloud on synthetic fixtures. Builder publishes per board #18. Transfer lesson learned: device_commit_files is the byte-perfect path, chunk relays retired",
@@ -41,7 +37,11 @@
   "- 2026-08-08 00:33 UTC . pushbot . PUSHED night/auto-20260807-2338 -> origin (59 commits ahead of beta-2)",
   "- 2026-08-08 00:33 UTC . pushbot . PR OPENED for night/auto-20260807-2338 (base release/sentr-1.0)",
   "- 2026-08-08 00:33 UTC . mac auto-builder v3.0 . wake finished",
-  "- 2026-08-08 00:48 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-08 00:48 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-08 01:36 UTC . pushbot . PUSHED night/auto-20260808-0048 -> origin (59 commits ahead of beta-2)",
+  "- 2026-08-08 01:36 UTC . pushbot . PR OPENED for night/auto-20260808-0048 (base release/sentr-1.0)",
+  "- 2026-08-08 01:36 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-08 01:51 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -122,7 +122,7 @@
   {
    "n": 23,
    "task": "THE ONLY WORK TONIGHT — FOUNDER ORDER 2026-08-08: get the office's engine work onto HER app and green. Branch **night/engine-port-20260808** (pushed, based on release/sentr-1.0 + her day's work). It carries: import speedup f2636dc, card-one floor 6f819a9, conversion_counters.dart. STATE: analyze clean at trunk baseline (18 known), full suite RED — 3042 pass / 20 FAIL. DIAGNOSIS ALREADY DONE, start here: all 20 are in OLD-APP beta tests — test/beta/stress_test.dart (17 lines), test/beta/file_door_test.dart (16), test/beta/no_internals_rendered_test.dart (10), test/beta/card_contract_test.dart (5), test/stability_smoke_test.dart (4, \"clean install onboards and opens\"), test/hostile_import_wrong_data_test.dart (4), test/ghost_life_feeds_test.dart (3). FIRST QUESTION TO ANSWER (I could not, ran out of session): were these ALREADY red on night/clone-day-20260808 BEFORE the port? Run that branch's full suite first and compare. If already red, they are the founder's day-work vs old-app-tests collision and the fix is to decide per test whether it still describes the paper app; if the port caused them, the import-speedup cherry-pick (f2636dc) is the suspect — it rewrote lib/ghost_brain/language/*. YOUR JOB, in order: (1) run `flutter test` on that branch, list the 20 failures; (2) for each, decide honestly — a ported test that assumes OLD-APP structure gets DELETED with a log line naming it; a real regression gets FIXED; never weaken a law to green a test; (3) full suite green + analyze clean + render law green; (4) push, PR base release/sentr-1.0; (5) log \"PORT GREEN\" in caps with the commit. THEN continue #22's remaining ports (engine/data only) the same way. Do NOT touch beta-2 tonight. Do NOT install to her phone — she installs, or the next session does after her go",
-   "status": "IN PROGRESS — mac auto-builder wake 2338, 2026-08-07 23:40 UTC, branch night/engine-port-20260808 (Ghost_Clone). Pre-port baseline suite running in parallel in worktree /private/tmp/dayref (night/clone-day-20260808) to answer the FIRST QUESTION"
+   "status": "IN PROGRESS — mac auto-builder wake 0048, 2026-08-08 01:35 UTC, branch **night/auto-20260808-0048** (worktree /private/tmp/port0048, cut FROM night/engine-port-20260808; verified release/sentr-1.0 IS an ancestor and beta-2 is NOT). Took over wake 2338's claim (killed at cap 00:33). **FIRST QUESTION ANSWERED: the 20 reds were NOT pre-existing in the way the map assumed.** Pre-port baseline on night/clone-day-20260808 ran the 7 suspect files: 56 pass / 1 fail — only stability_smoke (\"clean install onboards\"), the day-work vs old-app-test collision, which wake 2338 had already retired. Wake 2338's b7194a7 cleared the rest, leaving the real branch state at **2 reds, not 20**: (a) production_wiring — GhostQuestionScreen orphaned; (b) question_box_holdings — 'interview' source literal unclassified. Both are board #11's two halves. ALSO FOUND: **the port was hollow** — aa2fa8e (\"language layer regen\") reverted 1071b25's lib/ hunks, so the branch carried the import-speedup LAW and docs with NONE of the speedup; propositions.dart was byte-identical to the pre-speedup file"
   },
   {
    "n": 14,
