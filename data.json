@@ -1,10 +1,7 @@
 {
- "generatedAt": "2026-08-08T22:02:55Z",
+ "generatedAt": "2026-08-08T22:05:30Z",
  "runway": 80,
  "log": [
-  "- 2026-08-08 20:51 UTC . pushbot . PR OPENED for night/laneB-20260808-2041 (base release/sentr-1.0)",
-  "- 2026-08-08 20:51 UTC . pushbot . PR OPENED for night/laneC-20260808-2041 (base release/sentr-1.0)",
-  "- 2026-08-08 20:51 UTC . pushbot . PR OPENED for night/laneD-20260808-2041 (base release/sentr-1.0)",
   "- 2026-08-08 20:51 UTC . pushbot . PR OPENED for night/laneE-20260808-2041 (base release/sentr-1.0)",
   "- 2026-08-08 20:51 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-08 20:51 UTC . mac auto-builder v3.0 . wake",
@@ -40,7 +37,10 @@
   "- 2026-08-08 22:02 UTC . pushbot . PR OPENED for night/laneD-20260808-2129 (base release/sentr-1.0)",
   "- 2026-08-08 22:02 UTC . mac auto-builder v3.0 . wake finished",
   "- 2026-08-08 22:02 UTC . janitor . disk 95% but a compile is IN FLIGHT - deferring reclaim (deleting caches under xcodebuild is what broke the 23:45 build)",
-  "- 2026-08-08 22:02 UTC . mac auto-builder v3.0 . wake"
+  "- 2026-08-08 22:02 UTC . mac auto-builder v3.0 . wake",
+  "- 2026-08-08 22:05 UTC . mac auto-builder v3.0 . wake finished",
+  "- 2026-08-08 22:05 UTC . janitor . disk 96% but a compile is IN FLIGHT - deferring reclaim (deleting caches under xcodebuild is what broke the 23:45 build)",
+  "- 2026-08-08 22:05 UTC . mac auto-builder v3.0 . wake"
  ],
  "board": [
   {
@@ -942,6 +942,11 @@
    "n": 98,
    "task": "**A CASE THAT PASSES ALONE AND FAILS IN ITS OWN FILE, AND THE REASON IS ONE SENTENCE EVERY WAKE SHOULD HAVE: `pumpAndSettle` CANNOT DRAIN A DELAYED TI...",
    "status": "**DONE — red closed same wake, with the one-sentence rule that generalises it**"
+  },
+  {
+   "n": 99,
+   "task": "**MONDAY CRITERION 5 HAS A FRESH COUNT AND IT IS THE FIRST ONE TAKEN ON A TREE THAT HOLDS BOTH LINEAGES: `+3085 ~10`, 21 SHARDS, PASS=19 FAIL=2 ABORT=...",
+   "status": "**DONE — count logged, both reds named and closed; a confirming full re-run is OWED**"
   }
  ]
 }
